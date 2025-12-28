@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3001",
     "lint": "next lint",
-    "clean": "rm -rf .next node_modules"
+    "clean": "rm -rf .next out node_modules",
+    "export": "next build",
+    "netlify:build": "npm run build"
   },
   "dependencies": {
     "next": "14.2.0",
