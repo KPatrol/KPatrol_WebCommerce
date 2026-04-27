@@ -1,1 +1,2 @@
 - i18n locale support
+- admin dashboard scaffolding
