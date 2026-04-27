@@ -1,3 +1,4 @@
 - i18n locale support
 - admin dashboard scaffolding
 - admin auth flow
+- admin route guards
