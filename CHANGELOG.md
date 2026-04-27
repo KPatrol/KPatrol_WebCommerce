@@ -3,3 +3,4 @@
 - admin auth flow
 - admin route guards
 - products catalog scaffolding
+- products api endpoints
