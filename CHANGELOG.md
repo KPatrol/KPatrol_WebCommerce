@@ -2,3 +2,4 @@
 - admin dashboard scaffolding
 - admin auth flow
 - admin route guards
+- products catalog scaffolding
