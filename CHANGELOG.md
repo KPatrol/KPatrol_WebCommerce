@@ -4,3 +4,4 @@
 - admin route guards
 - products catalog scaffolding
 - products api endpoints
+- products data persistence
