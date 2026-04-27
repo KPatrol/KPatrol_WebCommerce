@@ -7,3 +7,4 @@
 - products data persistence
 - contact inquiries flow
 - inquiry notifications
+- live map gis integration
