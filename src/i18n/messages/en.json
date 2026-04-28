@@ -1,0 +1,879 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "products": "Products",
+    "pricing": "Pricing",
+    "demo": "Demo",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "bookDemo": "Book Demo",
+    "liveDemo": "Live Demo",
+    "useCases": "Use Cases",
+    "viewDemo": "View Demo",
+    "orderNow": "Order Now",
+    "hotlineSupport": "Support Hotline",
+    "testimonials": "Reviews",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "badge": "Advanced AIoT Technology",
+    "title": "Patrol Robot",
+    "subtitle": "Intelligent",
+    "description": "24/7 security monitoring solution with smart AI recognition. Flexible movement with Mecanum wheels, remote control via Internet.",
+    "stats": {
+      "uptime": {
+        "value": "24/7",
+        "label": "Continuous Operation"
+      },
+      "latency": {
+        "value": "4WD",
+        "label": "Mecanum Omni-Drive"
+      },
+      "accuracy": {
+        "value": "AI",
+        "label": "Real-time Detection"
+      }
+    },
+    "cta": {
+      "primary": "Contact Sales",
+      "secondary": "Watch Demo"
+    },
+    "scrollHint": "Explore More"
+  },
+  "features": {
+    "badge": "Outstanding Features",
+    "title": "Technology",
+    "titleHighlight": "Excellence",
+    "description": "K-Patrol is equipped with the most advanced technologies, providing comprehensive and intelligent security monitoring solutions.",
+    "stats": {
+      "features": "Main Features",
+      "uptime": "Operation",
+      "latency": "Latency",
+      "reliability": "Uptime"
+    },
+    "list": {
+      "ai": {
+        "title": "AI Recognition",
+        "description": "Advanced AI technology recognizes people, vehicles and anomalies in real-time"
+      },
+      "night": {
+        "title": "Night Vision",
+        "description": "Infrared camera and smart lighting for perfect vision in the dark"
+      },
+      "patrol": {
+        "title": "Auto Patrol",
+        "description": "Optimized patrol routes with automatic obstacle avoidance capability"
+      },
+      "alert": {
+        "title": "Instant Alert",
+        "description": "Real-time notifications via app and email when detecting threats"
+      },
+      "cloud": {
+        "title": "Cloud Storage",
+        "description": "Video data and reports are securely stored in the cloud"
+      },
+      "control": {
+        "title": "Remote Control",
+        "description": "Control and monitor robots anytime, anywhere via mobile app"
+      }
+    }
+  },
+  "useCases": {
+    "badge": "🏢 Applications",
+    "title": "Solutions For Every Industry",
+    "subtitle": "Patrol robots suitable for various sectors",
+    "consultCTA": "Free Consultation",
+    "heading": "Suitable for every ",
+    "headingHighlight": "environment",
+    "benefitsLabel": "Key Benefits:",
+    "trustedCustomers": "Trusted Customers",
+    "haveProject": "Need a monitoring project?",
+    "list": {
+      "office": {
+        "title": "Office Buildings",
+        "shortDescription": "Patrol corridors, check meeting rooms, monitor entry areas.",
+        "fullDescription": "K-Patrol automatically monitors office floors, detects strangers after work hours, and sends real-time alerts to security.",
+        "benefit1": "Reduce security costs by 70%",
+        "benefit2": "24/7 uninterrupted operation",
+        "benefit3": "Integrate with access control systems",
+        "stats": {
+          "value": "500+",
+          "label": "Buildings"
+        }
+      },
+      "warehouse": {
+        "title": "Warehouse & Logistics",
+        "shortDescription": "Monitor goods, detect intrusions, check safety 24/7.",
+        "fullDescription": "Automatically patrol on schedule, check goods with AI, detect fires and intrusions earliest.",
+        "benefit1": "Detect losses instantly",
+        "benefit2": "Automatic inventory checks",
+        "benefit3": "Early fire warning",
+        "stats": {
+          "value": "24/7",
+          "label": "Monitoring"
+        }
+      },
+      "home": {
+        "title": "Villas & Apartments",
+        "shortDescription": "Protect family, patrol gardens, alert strangers.",
+        "fullDescription": "Smart robot protecting your home. Recognize family faces, alert strangers via app.",
+        "benefit1": "Recognize family faces",
+        "benefit2": "Push notification alerts",
+        "benefit3": "Remote control anytime",
+        "stats": {
+          "value": "99.9%",
+          "label": "Accuracy"
+        }
+      },
+      "hospital": {
+        "title": "Hospital & Healthcare",
+        "shortDescription": "Monitor corridors, medical support, ensure patient safety.",
+        "fullDescription": "Patrol hospital areas, check security at night, assist navigation for patients and families.",
+        "benefit1": "Contactless, reduce infection",
+        "benefit2": "Quiet operation",
+        "benefit3": "Navigation assistance",
+        "stats": {
+          "value": "50+",
+          "label": "Hospitals"
+        }
+      },
+      "school": {
+        "title": "Schools & Campus",
+        "shortDescription": "Ensure campus safety, monitor after school hours.",
+        "fullDescription": "Patrol school campus, monitor gate areas, detect and alert abnormal behavior.",
+        "benefit1": "Student safety",
+        "benefit2": "School gate monitoring",
+        "benefit3": "Realtime reporting",
+        "stats": {
+          "value": "100+",
+          "label": "Schools"
+        }
+      },
+      "factory": {
+        "title": "Manufacturing Plants",
+        "shortDescription": "Monitor production lines, detect incidents, check safety.",
+        "fullDescription": "Patrol factory 24/7, detect production line issues, ensure labor safety and fire prevention.",
+        "benefit1": "Early incident detection",
+        "benefit2": "Reduce downtime",
+        "benefit3": "Labor safety",
+        "stats": {
+          "value": "200+",
+          "label": "Factories"
+        }
+      }
+    }
+  },
+  "specs": {
+    "badge": "Technical Specifications",
+    "title": "Professional",
+    "titleHighlight": "Design",
+    "description": "K-Patrol is designed with premium components, ensuring durability and superior performance in all conditions.",
+    "diagramTitle": "Technical Diagram",
+    "diagramSubtitle": "3D Model Preview",
+    "software": {
+      "title": "Operating System & Software",
+      "description": "Ubuntu 22.04 LTS + ROS2 Humble • Python 3.10 • TensorFlow Lite • Custom firmware ESP32-S3"
+    },
+    "categories": {
+      "hardware": "Hardware",
+      "performance": "Performance",
+      "connectivity": "Connectivity",
+      "camera": "Camera & Sensors"
+    },
+    "hardware": {
+      "dimensions": {
+        "label": "Dimensions",
+        "value": "45 × 35 × 30 cm",
+        "description": "Compact design"
+      },
+      "weight": {
+        "label": "Weight",
+        "value": "8 kg",
+        "description": "Light and agile"
+      },
+      "mainMcu": {
+        "label": "Main MCU",
+        "value": "Raspberry Pi 4",
+        "description": "8GB RAM"
+      },
+      "motorController": {
+        "label": "Motor Controller",
+        "value": "ESP32-S3",
+        "description": "WiFi + BLE"
+      },
+      "aiAccelerator": {
+        "label": "AI Accelerator",
+        "value": "Coral Edge TPU",
+        "description": "4 TOPS"
+      },
+      "motors": {
+        "label": "Motors",
+        "value": "4× DC Motor",
+        "description": "Integrated encoder"
+      }
+    },
+    "performance": {
+      "maxSpeed": {
+        "label": "Max Speed",
+        "value": "1.2 m/s",
+        "description": "Adjustable"
+      },
+      "battery": {
+        "label": "Battery",
+        "value": "5200mAh",
+        "description": "Premium Li-ion"
+      },
+      "runtime": {
+        "label": "Operating Time",
+        "value": "4-6 hours",
+        "description": "Mode-dependent"
+      },
+      "latency": {
+        "label": "Control Latency",
+        "value": "<500ms",
+        "description": "Real-time"
+      },
+      "aiProcessing": {
+        "label": "AI Processing",
+        "value": "30 FPS",
+        "description": "Object detection"
+      },
+      "accuracy": {
+        "label": "Accuracy",
+        "value": "99.9%",
+        "description": "AI recognition"
+      }
+    },
+    "connectivity": {
+      "wifi": {
+        "label": "WiFi",
+        "value": "Dual-band 5GHz",
+        "description": "802.11ac"
+      },
+      "cellular": {
+        "label": "Cellular",
+        "value": "4G LTE",
+        "description": "SIM support"
+      },
+      "videoStream": {
+        "label": "Video Stream",
+        "value": "WebRTC",
+        "description": "<500ms latency"
+      },
+      "cloud": {
+        "label": "Cloud",
+        "value": "AWS IoT",
+        "description": "Secure MQTT"
+      },
+      "app": {
+        "label": "App",
+        "value": "iOS & Android",
+        "description": "Cross-platform"
+      },
+      "api": {
+        "label": "API",
+        "value": "REST + WebSocket",
+        "description": "Real-time"
+      }
+    },
+    "camera": {
+      "mainCamera": {
+        "label": "Main Camera",
+        "value": "1080p @ 30fps",
+        "description": "Wide angle"
+      },
+      "nightVision": {
+        "label": "Night Vision",
+        "value": "IR LED",
+        "description": "Auto-enable"
+      },
+      "lidar": {
+        "label": "LiDAR",
+        "value": "RPLiDAR A1",
+        "description": "360° scanning"
+      },
+      "imu": {
+        "label": "IMU",
+        "value": "MPU6050",
+        "description": "6-axis"
+      },
+      "ultrasonic": {
+        "label": "Ultrasonic",
+        "value": "4× HC-SR04",
+        "description": "Obstacle detect"
+      },
+      "encoder": {
+        "label": "Encoder",
+        "value": "Optical",
+        "description": "High precision"
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "⭐ Reviews",
+    "title": "What Customers Say",
+    "subtitle": "Over 100+ enterprises trust our solution",
+    "stats": {
+      "customers": {
+        "value": "500+",
+        "label": "Trusted Customers"
+      },
+      "satisfaction": {
+        "value": "98%",
+        "label": "Satisfaction Rate"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Technical Support"
+      },
+      "rating": {
+        "value": "4.9/5",
+        "label": "Average Rating"
+      }
+    },
+    "list": [
+      {
+        "id": 1,
+        "name": "Nguyen Van Minh",
+        "role": "Security Director",
+        "company": "Vingroup",
+        "content": "K-Patrol has completely changed how we manage security. The AI intrusion detection system is extremely accurate, helping reduce 24/7 security costs by 80%. Worth the investment!",
+        "highlight": "80% cost reduction",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Tran Thi Huong",
+        "role": "Villa Owner",
+        "company": "Phu My Hung Urban Area",
+        "content": "As a woman living alone, K-Patrol gives me absolute peace of mind. I can monitor every corner of my house via phone, even when on business trips.",
+        "highlight": "Absolute security",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Le Hoang Nam",
+        "role": "CEO",
+        "company": "Tech Solutions Vietnam",
+        "content": "We deployed K-Patrol for our 5-floor office. Integration with existing systems was seamless. Support team is enthusiastic and responsive.",
+        "highlight": "Seamless integration",
+        "rating": 5
+      },
+      {
+        "id": 4,
+        "name": "Pham Duc Anh",
+        "role": "Warehouse Manager",
+        "company": "Logistics VN",
+        "content": "K-Patrol patrols the warehouse 24/7, detecting fires and leaks early. Saved us from a potential fire thanks to timely warnings. Life-saving product!",
+        "highlight": "Timely alerts",
+        "rating": 5
+      },
+      {
+        "id": 5,
+        "name": "Vo Minh Chau",
+        "role": "Resort Director",
+        "company": "Fusion Maia Danang",
+        "content": "Tourists are very impressed with our security robot. Both ensures safety and creates a tech highlight for the resort. ROI visible after 6 months.",
+        "highlight": "ROI in 6 months",
+        "rating": 5
+      }
+    ]
+  },
+  "pricing": {
+    "badge": "💰 Pricing",
+    "title": "Flexible Service Plans",
+    "subtitle": "Choose a plan that fits your needs and budget",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlyDiscount": "Save 20%",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small businesses",
+        "price": "$650",
+        "period": "/month",
+        "features": [
+          "1 Patrol robot",
+          "Basic auto patrol",
+          "HD Camera",
+          "Real-time alerts",
+          "7-day storage",
+          "Email support"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Best for medium businesses",
+        "price": "$1,500",
+        "period": "/month",
+        "popular": true,
+        "features": [
+          "3 Patrol robots",
+          "Advanced AI recognition",
+          "4K Camera + Night Vision",
+          "Multi-channel alerts",
+          "30-day storage",
+          "24/7 Support",
+          "Detailed reports",
+          "API integration"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Complete solution for enterprises",
+        "price": "Contact",
+        "period": "",
+        "features": [
+          "Unlimited robots",
+          "Custom AI",
+          "Premium hardware",
+          "Custom system integration",
+          "Unlimited storage",
+          "Dedicated account manager",
+          "99.99% SLA",
+          "Training & deployment"
+        ]
+      }
+    },
+    "cta": "Get Started",
+    "ctaEnterprise": "Contact Sales"
+  },
+  "faq": {
+    "badge": "❓ FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about patrol robots",
+    "items": {
+      "q1": {
+        "question": "How long does the robot operate on a single charge?",
+        "answer": "The robot can operate continuously for 8-10 hours on a full battery. When battery drops below 20%, the robot automatically returns to charging station and continues patrol after fully charged."
+      },
+      "q2": {
+        "question": "Can the robot operate in bad weather conditions?",
+        "answer": "Yes, the robot is designed with IP65 water resistance, capable of operating in light rain and humid environments. However, it's not recommended for use in heavy storms."
+      },
+      "q3": {
+        "question": "How long does it take to install and deploy the system?",
+        "answer": "Installation typically takes 2-3 days including site survey, hardware installation, software configuration and operation training. For large systems, it may take 1-2 weeks."
+      },
+      "q4": {
+        "question": "Is video data encrypted and secure?",
+        "answer": "All video data is encrypted with AES-256 during transmission and storage. We comply with international security standards and GDPR to protect privacy."
+      },
+      "q5": {
+        "question": "Can the robot avoid obstacles and move safely?",
+        "answer": "The robot is equipped with multiple ultrasonic sensors, 360-degree camera and SLAM algorithm to detect and avoid obstacles. The system ensures safe movement without collisions."
+      },
+      "q6": {
+        "question": "Can I control the robot remotely?",
+        "answer": "Yes, you can control the robot directly via mobile app or web interface. You can view real-time camera, manual navigation and configure patrol routes."
+      }
+    }
+  },
+  "contact": {
+    "badge": "📞 Contact",
+    "title": "Start Your Journey",
+    "subtitle": "Leave your information, we'll contact you with detailed consultation within 24 hours",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "company": "Company",
+      "message": "Message",
+      "submit": "Submit Request",
+      "submitting": "Submitting...",
+      "success": "Thank you! We'll contact you soon.",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "addressValue": "123 Nguyen Hue Street, District 1, HCMC",
+      "email": "Email",
+      "emailValue": "contact@kpatrol.vn",
+      "phone": "Phone",
+      "phoneValue": "+84 28 1234 5678",
+      "hours": "Business Hours",
+      "hoursValue": "Mon-Fri: 8:00 AM - 6:00 PM"
+    }
+  },
+  "cta": {
+    "badge": "🎯 Ready to get started?",
+    "title": "Upgrade Your Security",
+    "titleHighlight": "Today",
+    "subtitle": "Experience smart patrol robot solution free for 30 days",
+    "description": "Experience the intelligent patrol robot solution with advanced AI technology. Protect your assets 24/7 with superior efficiency.",
+    "primary": "Free Trial",
+    "secondary": "Contact Sales",
+    "packageBadge": "Complete Package",
+    "price": "Contact Us",
+    "currency": "USD",
+    "priceDescription": "Includes everything you need to get started",
+    "orderButton": "Order Now",
+    "features": {
+      "robot": "1 K-Patrol Smart Patrol Robot",
+      "ai": "AI Detection & Alert System",
+      "app": "Mobile Management App iOS/Android",
+      "cloud": "6-Month Cloud Storage",
+      "warranty": "12-Month Official Warranty",
+      "setup": "Free Installation & Training Support",
+      "support": "24/7 Technical Support",
+      "update": "Lifetime Software Updates"
+    },
+    "guarantees": {
+      "warranty": "12-Month Warranty",
+      "delivery": "7-Day Delivery",
+      "support": "24/7 Support"
+    },
+    "contact": {
+      "email": {
+        "label": "Email",
+        "value": "contact@kpatrol.khoavd.online"
+      },
+      "phone": {
+        "label": "Hotline",
+        "value": "0822608286"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Phenikaa University, Duong Noi Ward, Hanoi City"
+      }
+    },
+    "form": {
+      "title": "Or Leave Your Information",
+      "subtitle": "We'll contact you for consultation within 24 hours",
+      "successTitle": "Sent Successfully!",
+      "successMessage": "We will contact you as soon as possible.",
+      "namePlaceholder": "Full Name",
+      "companyPlaceholder": "Company Name (optional)",
+      "emailPlaceholder": "Your Email",
+      "phonePlaceholder": "Phone Number",
+      "messagePlaceholder": "Your message...",
+      "submitting": "Sending...",
+      "submitButton": "Send Consultation Request",
+      "agreement": "By submitting this form, you agree to our privacy policy."
+    }
+  },
+  "footer": {
+    "brand": {
+      "tagline": "Smart Patrol Robot",
+      "description": "Vietnam's leading smart security patrol robot solution. Protect your assets 24/7 with advanced AI technology."
+    },
+    "newsletter": {
+      "title": "Get Latest Updates",
+      "description": "Subscribe to receive news about new products and special offers",
+      "placeholder": "Enter your email",
+      "button": "Subscribe",
+      "subscribing": "Subscribing...",
+      "success": "Thank you for subscribing!"
+    },
+    "product": "Product",
+    "features": "Features",
+    "specifications": "Specifications",
+    "pricing": "Pricing",
+    "demo": "Demo",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "press": "Press",
+    "support": "Support",
+    "documentation": "Documentation",
+    "apiReference": "API Reference",
+    "community": "Community",
+    "contact": "Contact",
+    "contactInfo": {
+      "email": "Email",
+      "emailValue": "contact@kpatrol.khoavd.online",
+      "hotline": "Hotline",
+      "hotlineValue": "0822608286",
+      "address": "Address",
+      "addressValue": "Phenikaa University, Duong Noi Ward, Hanoi City"
+    },
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookies",
+    "sitemap": "Sitemap",
+    "copyright": "© 2026 K-Patrol. All rights reserved.",
+    "madeWith": "Made with",
+    "madeWithLove": "love",
+    "in": "in Vietnam"
+  },
+  "demo": {
+    "badge": "🎮 Demo",
+    "title": "Experience the Robot",
+    "subtitle": "Book a live demo or watch detailed introduction video",
+    "bookTitle": "Book Demo",
+    "bookDescription": "We'll come directly to demo the robot at your location",
+    "videoTitle": "Video Demo",
+    "videoDescription": "Watch the robot in action in real scenarios"
+  },
+  "partners": {
+    "title": "Partners &",
+    "titleHighlight": "Certifications",
+    "description": "Trusted by leading enterprises and certified with international standards.",
+    "certifications": {
+      "iso27001": {
+        "title": "ISO 27001",
+        "description": "Information security certified"
+      },
+      "ce": {
+        "title": "CE Marking",
+        "description": "European standard"
+      },
+      "madeInVietnam": {
+        "title": "Made in Vietnam",
+        "description": "Manufactured in Vietnam"
+      },
+      "rohs": {
+        "title": "RoHS Compliant",
+        "description": "Environmentally friendly"
+      }
+    },
+    "paymentText": "Secure payment with"
+  },
+  "notification": {
+    "success": "Success!",
+    "error": "Error!",
+    "warning": "Warning!",
+    "info": "Information",
+    "formSubmitted": "Form submitted successfully",
+    "formError": "An error occurred while submitting the form",
+    "emailSent": "Email sent",
+    "demoBooked": "Demo booked successfully",
+    "copiedToClipboard": "Copied to clipboard"
+  },
+  "liveMap": {
+    "badge": "Live Patrol Demo",
+    "title": "Real-time",
+    "titleHighlight": "monitoring",
+    "description": "The robot patrols its planned route, detects anomalies — automatically captures snapshots and instantly alerts your phone.",
+    "patrolMode": "Patrol Mode",
+    "telemetry": {
+      "battery": "Battery",
+      "heading": "Heading",
+      "speed": "Speed",
+      "signal": "Signal"
+    },
+    "eventsToday": "Today's events",
+    "live": "Live",
+    "autoCapture": "Robot auto-captured & sent the alert",
+    "events": [
+      {
+        "label": "Person detected",
+        "time": "14:23"
+      },
+      {
+        "label": "Fire alert",
+        "time": "14:31"
+      },
+      {
+        "label": "Unusual motion",
+        "time": "14:45"
+      }
+    ],
+    "stats": [
+      {
+        "v": "24/7",
+        "l": "Uptime"
+      },
+      {
+        "v": "3.2km",
+        "l": "Patrolled"
+      },
+      {
+        "v": "18",
+        "l": "Events"
+      }
+    ]
+  },
+  "featuresBento": {
+    "badge": "AI & Hardware",
+    "title": "Engineered for",
+    "titleHighlight": "intelligent security",
+    "description": "Raspberry Pi 4 Model B + YOLOv8 + MQTT — every feature is tuned for accurate detection and instant response.",
+    "person": {
+      "tag": "YOLOv8n",
+      "titleLine1": "Person detection",
+      "titleLine2": "auto snapshot",
+      "description": "On-device AI detects people in restricted zones, auto-captures HD images and pushes MQTT alerts to your phone in <500ms.",
+      "tags": [
+        "Edge AI",
+        "No cloud",
+        "GDPR safe"
+      ]
+    },
+    "fire": {
+      "title": "Fire alert",
+      "description": "AI detects flames & smoke, sends SOS with location to managers & fire services."
+    },
+    "mapLive": {
+      "title": "Live map",
+      "description": "Track robot position, trajectory & hotspots on web/mobile in real time."
+    },
+    "specs": {
+      "title": "Specs",
+      "items": [
+        {
+          "k": "CPU",
+          "v": "Raspberry Pi 4B · ARM"
+        },
+        {
+          "k": "MCU",
+          "v": "ESP32 Dual-core"
+        },
+        {
+          "k": "Battery",
+          "v": "12V 10Ah · 8h"
+        },
+        {
+          "k": "Sensors",
+          "v": "Line × 5 · IMU"
+        },
+        {
+          "k": "Connectivity",
+          "v": "WiFi · MQTT · BLE"
+        },
+        {
+          "k": "Camera",
+          "v": "1080p · IR night"
+        },
+        {
+          "k": "Dimensions",
+          "v": "28 × 22 × 18 cm"
+        },
+        {
+          "k": "Speed",
+          "v": "0.5 m/s cruise"
+        }
+      ]
+    },
+    "cameraHd": {
+      "title": "HD + IR Camera",
+      "description": "1080p daytime, infrared at night — snapshots saved automatically to the cloud."
+    },
+    "mqtt": {
+      "title": "MQTT <100ms",
+      "description": "Lightweight protocol, ultra-low latency — real-time control & telemetry."
+    },
+    "secure": {
+      "title": "TLS Security",
+      "description": "TLS 1.3 encryption, JWT auth, audit logs — enterprise-grade compliance."
+    },
+    "autoCharge": {
+      "title": "Auto charge",
+      "description": "When battery drops below 20%, the robot returns to its dock — no manual intervention."
+    }
+  },
+  "pricingFaq": {
+    "badge": "Plans for every scale",
+    "title": "Pick the plan",
+    "titleHighlight": "that fits you",
+    "subtitle": "No hidden fees. No messy contracts. Transparent — 30-day money-back guarantee.",
+    "popular": "Most popular",
+    "plans": [
+      {
+        "name": "Starter",
+        "tagline": "For families & small shops",
+        "price": "14,900,000",
+        "unit": "VND",
+        "features": [
+          "1 K-Patrol V10 robot",
+          "iOS/Android mobile app",
+          "Person detection & alerts",
+          "7-day storage",
+          "12 months support"
+        ],
+        "cta": "Order now",
+        "highlighted": false
+      },
+      {
+        "name": "Pro",
+        "tagline": "Offices & mid-size warehouses",
+        "price": "24,900,000",
+        "unit": "VND",
+        "features": [
+          "Everything in Starter",
+          "AI fire detection",
+          "30-day cloud storage",
+          "Multi-zone patrol",
+          "Web management dashboard",
+          "24 months support"
+        ],
+        "cta": "Most picked",
+        "highlighted": true
+      },
+      {
+        "name": "Enterprise",
+        "tagline": "Buildings & large chains",
+        "price": "Contact us",
+        "unit": "",
+        "features": [
+          "Everything in Pro",
+          "Multi-robot fleet, large maps",
+          "API & SSO integration",
+          "SLA 99.9% uptime",
+          "On-site training",
+          "Lifetime support"
+        ],
+        "cta": "Request quote",
+        "highlighted": false
+      }
+    ],
+    "faq": {
+      "title": "Frequently",
+      "titleHighlight": "asked questions",
+      "subtitle": "Don't see your question? Call our hotline at 0822 608 286.",
+      "items": [
+        {
+          "q": "Does the robot work in the dark?",
+          "a": "Yes. K-Patrol V10 ships with an IR camera and light-independent navigation sensors — it works down to 0 lux."
+        },
+        {
+          "q": "Is person detection accurate? Does it risk my privacy?",
+          "a": "YOLOv8n runs on-device at >95% accuracy. Images are processed on the Raspberry Pi and only sent to the owner's phone when an anomaly is detected — nothing is streamed to the cloud."
+        },
+        {
+          "q": "Does the robot need WiFi to operate?",
+          "a": "The robot patrols its planned route autonomously. WiFi is only needed for alerts & remote control — if the network drops, the robot keeps running."
+        },
+        {
+          "q": "How long does the battery last? Do I need to charge it manually?",
+          "a": "The 12V 10Ah battery lasts ~8 hours of continuous operation. The robot auto-returns to the dock when battery drops below 20% — no manual steps."
+        },
+        {
+          "q": "Can I install it myself or do I need a technician?",
+          "a": "Starter/Pro: self-install in 15 minutes via the app. Enterprise: our team handles installation & training for free."
+        },
+        {
+          "q": "What about warranty & maintenance?",
+          "a": "12–24 months warranty depending on plan. On-site repair within Hanoi & HCMC. Enterprise plans include a 4-hour SLA response."
+        }
+      ]
+    }
+  },
+  "contactCta": {
+    "title": "Ready to protect",
+    "titleHighlight": "your space?",
+    "description": "Order today — nationwide delivery in 5–7 days. Free on-site setup in Hanoi & HCMC.",
+    "callNow": "Call now: 0822 608 286",
+    "viewDemo": "View demo",
+    "form": {
+      "nameLabel": "Full name",
+      "namePlaceholder": "Jane Doe",
+      "phoneLabel": "Phone number",
+      "phonePlaceholder": "0xxx xxx xxx",
+      "messageLabel": "Your needs",
+      "messagePlaceholder": "I'd like a quote for the Pro plan for a 200m² office...",
+      "submit": "Send inquiry",
+      "submitting": "Sending...",
+      "sent": "Sent — we'll be in touch shortly!"
+    },
+    "cards": {
+      "hotline": "Hotline 24/7",
+      "email": "Email",
+      "address": "Address",
+      "addressValue": "Phenikaa University, Yen Nghia, Hanoi"
+    }
+  }
+}
