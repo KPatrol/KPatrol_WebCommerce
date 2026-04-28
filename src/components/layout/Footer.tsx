@@ -4,34 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Bot, Mail, Phone, MapPin, Github, Facebook, Youtube, 
-  Twitter, Linkedin, Send, ArrowUpRight, Loader2, Check,
-  Heart
+  Bot, Mail, Phone, MapPin, Github, Facebook, Youtube,
+  Twitter, Linkedin, Send, ArrowUpRight, Loader2, Check
 } from 'lucide-react';
-
-const footerLinks = {
-  products: [
-    { label: 'K-Patrol Bot', href: '#', badge: 'Hot' },
-    { label: 'Mobile App', href: '#' },
-    { label: 'Web Dashboard', href: '#' },
-    { label: 'API & SDK', href: '#' },
-    { label: 'Phụ kiện', href: '#', badge: 'New' },
-  ],
-  support: [
-    { label: 'Tài liệu kỹ thuật', href: '#' },
-    { label: 'Hướng dẫn sử dụng', href: '#' },
-    { label: 'FAQ', href: '#' },
-    { label: 'Chính sách bảo hành', href: '#' },
-    { label: 'Trung tâm hỗ trợ', href: '#' },
-  ],
-  company: [
-    { label: 'Về chúng tôi', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Tuyển dụng', href: '#', badge: 'Hiring' },
-    { label: 'Đối tác', href: '#' },
-    { label: 'Liên hệ', href: '#contact' },
-  ],
-};
+import { useTranslations } from '@/hooks/useTranslations';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com', label: 'GitHub', color: 'hover:bg-[#333]' },
@@ -42,6 +18,50 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const { t, locale } = useTranslations();
+  
+  const footerLinks = {
+    products: locale === 'vi' ? [
+      { label: 'K-Patrol Bot', href: '#', badge: 'Hot' },
+      { label: 'Mobile App', href: '#' },
+      { label: 'Web Dashboard', href: '#' },
+      { label: 'API & SDK', href: '#' },
+      { label: 'Phụ kiện', href: '#', badge: 'New' },
+    ] : [
+      { label: 'K-Patrol Bot', href: '#', badge: 'Hot' },
+      { label: 'Mobile App', href: '#' },
+      { label: 'Web Dashboard', href: '#' },
+      { label: 'API & SDK', href: '#' },
+      { label: 'Accessories', href: '#', badge: 'New' },
+    ],
+    support: locale === 'vi' ? [
+      { label: 'Tài liệu kỹ thuật', href: '#' },
+      { label: 'Hướng dẫn sử dụng', href: '#' },
+      { label: 'FAQ', href: '#' },
+      { label: 'Chính sách bảo hành', href: '#' },
+      { label: 'Trung tâm hỗ trợ', href: '#' },
+    ] : [
+      { label: 'Technical Documentation', href: '#' },
+      { label: 'User Guide', href: '#' },
+      { label: 'FAQ', href: '#' },
+      { label: 'Warranty Policy', href: '#' },
+      { label: 'Support Center', href: '#' },
+    ],
+    company: locale === 'vi' ? [
+      { label: 'Về chúng tôi', href: '#' },
+      { label: 'Blog', href: '#' },
+      { label: 'Tuyển dụng', href: '#', badge: 'Hiring' },
+      { label: 'Đối tác', href: '#' },
+      { label: 'Liên hệ', href: '#contact' },
+    ] : [
+      { label: 'About Us', href: '#' },
+      { label: 'Blog', href: '#' },
+      { label: 'Careers', href: '#', badge: 'Hiring' },
+      { label: 'Partners', href: '#' },
+      { label: 'Contact', href: '#contact' },
+    ],
+  };
+  
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -60,49 +80,48 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-dark-950 overflow-hidden">
+    <footer className="relative bg-slate-950 overflow-hidden">
       {/* Top gradient line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-kpatrol-500/50 to-transparent" />
-      
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/55 to-transparent shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
+
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-kpatrol-500/5 blur-3xl" />
-        <div className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full bg-accent-500/5 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-[100px]" />
+        <div className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full bg-blue-500/10 blur-[100px]" />
       </div>
 
       {/* Newsletter Section */}
-      <div className="relative border-b border-white/5">
-        <div className="container-custom py-16">
+      <div className="relative border-b border-cyan-500/15">
+        <div className="container-custom py-12 md:py-16">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-kpatrol-500/10 border border-kpatrol-500/20 text-sm text-kpatrol-400 mb-6"
+              className="cockpit-panel inline-flex items-center gap-2 px-4 py-2 mb-6"
             >
-              <Mail className="w-4 h-4" />
-              Đăng ký nhận tin
+              <Mail className="w-4 h-4 text-cyan-300" />
+              <span className="label-hud text-cyan-200">Newsletter</span>
             </motion.div>
-            
+
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-3xl md:text-4xl font-bold font-display mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl heading-display mb-4 leading-tight"
             >
-              Nhận tin tức & ưu đãi{' '}
-              <span className="text-gradient">mới nhất</span>
+              <span className="gradient-text">{t('footer.newsletter.title')}</span>
             </motion.h3>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-dark-400 mb-8 max-w-lg mx-auto"
+              className="text-slate-400 text-sm md:text-base mb-6 md:mb-8 max-w-lg mx-auto"
             >
-              Đăng ký để nhận thông tin về sản phẩm mới, cập nhật tính năng và các chương trình ưu đãi độc quyền.
+              {t('footer.newsletter.description')}
             </motion.p>
 
             <motion.form
@@ -115,36 +134,36 @@ export function Footer() {
             >
               <div className="relative flex-1">
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                  <Mail className="w-5 h-5 text-dark-500" />
+                  <Mail className="w-5 h-5 text-slate-500" />
                 </div>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
-                  className="w-full h-14 pl-12 pr-4 rounded-xl bg-dark-800 border border-white/10 text-white placeholder:text-dark-500 focus:outline-none focus:border-kpatrol-500/50 focus:ring-2 focus:ring-kpatrol-500/20 transition-all"
+                  placeholder={t('footer.newsletter.placeholder')}
+                  className="w-full h-12 md:h-14 pl-12 pr-4 rounded-xl bg-slate-900/60 ring-1 ring-cyan-500/20 text-white text-sm md:text-base placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400/60 transition-all"
                   disabled={isSubmitting}
                 />
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting || !email}
-                className="h-14 px-8 rounded-xl bg-kpatrol-500 hover:bg-kpatrol-600 text-white font-semibold flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                className="h-12 md:h-14 px-6 md:px-8 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 ring-1 ring-cyan-300/40 text-white text-sm md:text-base font-black uppercase tracking-widest flex items-center justify-center gap-2 shadow-[0_0_18px_rgba(34,211,238,0.4)] hover:shadow-[0_0_28px_rgba(34,211,238,0.55)] hover:scale-[1.02] transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
               >
                 {isSubmitting ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    Đang gửi...
+                    {t('footer.newsletter.subscribing')}
                   </>
                 ) : isSubscribed ? (
                   <>
                     <Check className="w-4 h-4" />
-                    Đã đăng ký!
+                    {t('footer.newsletter.success')}
                   </>
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    Đăng ký
+                    {t('footer.newsletter.button')}
                   </>
                 )}
               </button>
@@ -154,24 +173,23 @@ export function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="relative container-custom py-16">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-12">
+      <div className="relative container-custom py-12 md:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-6 md:gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-kpatrol-500 to-accent-500 p-0.5 overflow-hidden">
-                <div className="w-full h-full rounded-xl bg-dark-900 flex items-center justify-center">
-                  <Bot className="w-7 h-7 text-kpatrol-400" />
+              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 p-0.5 overflow-hidden shadow-[0_0_18px_rgba(34,211,238,0.35)]">
+                <div className="w-full h-full rounded-xl bg-slate-950 flex items-center justify-center">
+                  <Bot className="w-7 h-7 text-cyan-300" />
                 </div>
               </div>
               <div>
-                <span className="text-xl font-bold font-display text-white">K-Patrol</span>
-                <p className="text-xs text-dark-500">Smart Security Robot</p>
+                <span className="text-xl font-black font-display text-white tracking-tight">K-Patrol</span>
+                <p className="label-hud text-slate-500">{t('footer.brand.tagline')}</p>
               </div>
             </Link>
-            <p className="text-dark-400 text-sm leading-relaxed mb-6">
-              Giải pháp robot tuần tra thông minh tích hợp AIoT cho doanh nghiệp và hộ gia đình. 
-              Công nghệ tiên tiến, bảo mật tối ưu.
+            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+              {t('footer.brand.description')}
             </p>
 
             {/* Social Links */}
@@ -182,7 +200,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 rounded-xl bg-dark-800/50 border border-white/5 flex items-center justify-center text-dark-400 hover:text-white hover:border-transparent transition-all ${social.color}`}
+                  className={`w-10 h-10 rounded-xl bg-slate-900/60 ring-1 ring-cyan-500/15 flex items-center justify-center text-slate-400 hover:text-white hover:ring-transparent transition-all ${social.color}`}
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />
@@ -193,19 +211,19 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Sản phẩm
+            <h4 className="label-hud text-cyan-200 mb-4">
+              {t('footer.product')}
             </h4>
             <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-sm text-dark-400 hover:text-kpatrol-400 transition-colors"
+                    className="group flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-200 transition-colors"
                   >
                     <span>{link.label}</span>
                     {link.badge && (
-                      <span className="px-1.5 py-0.5 text-[10px] font-semibold rounded bg-kpatrol-500/20 text-kpatrol-400">
+                      <span className="px-1.5 py-0.5 text-[10px] font-black uppercase tracking-widest rounded bg-cyan-500/15 ring-1 ring-cyan-400/40 text-cyan-300">
                         {link.badge}
                       </span>
                     )}
@@ -217,15 +235,15 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Hỗ trợ
+            <h4 className="label-hud text-cyan-200 mb-4">
+              {t('footer.support')}
             </h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-dark-400 hover:text-kpatrol-400 transition-colors"
+                    className="text-sm text-slate-400 hover:text-cyan-200 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -236,19 +254,19 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Công ty
+            <h4 className="label-hud text-cyan-200 mb-4">
+              {t('footer.company')}
             </h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-sm text-dark-400 hover:text-kpatrol-400 transition-colors"
+                    className="group flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-200 transition-colors"
                   >
                     <span>{link.label}</span>
                     {link.badge && (
-                      <span className="px-1.5 py-0.5 text-[10px] font-semibold rounded bg-green-500/20 text-green-400">
+                      <span className="px-1.5 py-0.5 text-[10px] font-black uppercase tracking-widest rounded bg-emerald-500/15 ring-1 ring-emerald-400/40 text-emerald-300">
                         {link.badge}
                       </span>
                     )}
@@ -260,45 +278,45 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Liên hệ
+            <h4 className="label-hud text-cyan-200 mb-4">
+              {t('footer.contact')}
             </h4>
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="mailto:contact@kpatrol.io"
-                  className="group flex items-start gap-3 text-sm text-dark-400 hover:text-white transition-colors"
+                  href="mailto:contact@kpatrol.khoavd.online"
+                  className="group flex items-start gap-3 text-sm text-slate-400 hover:text-white transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-kpatrol-500/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-4 h-4 text-kpatrol-400" />
+                  <div className="w-8 h-8 rounded-lg bg-cyan-500/15 ring-1 ring-cyan-400/40 shadow-[0_0_10px_rgba(34,211,238,0.2)] flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-4 h-4 text-cyan-300" />
                   </div>
                   <div>
-                    <p className="text-dark-500 text-xs mb-0.5">Email</p>
-                    <p className="group-hover:text-kpatrol-400 transition-colors">contact@kpatrol.io</p>
+                    <p className="label-hud text-slate-500 mb-0.5">{t('footer.contactInfo.email')}</p>
+                    <p className="group-hover:text-cyan-200 transition-colors">{t('footer.contactInfo.emailValue')}</p>
                   </div>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="tel:+841234567890"
-                  className="group flex items-start gap-3 text-sm text-dark-400 hover:text-white transition-colors"
+                  href="tel:0822608286"
+                  className="group flex items-start gap-3 text-sm text-slate-400 hover:text-white transition-colors"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-kpatrol-500/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-4 h-4 text-kpatrol-400" />
+                  <div className="w-8 h-8 rounded-lg bg-cyan-500/15 ring-1 ring-cyan-400/40 shadow-[0_0_10px_rgba(34,211,238,0.2)] flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-4 h-4 text-cyan-300" />
                   </div>
                   <div>
-                    <p className="text-dark-500 text-xs mb-0.5">Hotline</p>
-                    <p className="group-hover:text-kpatrol-400 transition-colors">1900 1234</p>
+                    <p className="label-hud text-slate-500 mb-0.5">{t('footer.contactInfo.hotline')}</p>
+                    <p className="group-hover:text-cyan-200 transition-colors">{t('footer.contactInfo.hotlineValue')}</p>
                   </div>
                 </Link>
               </li>
-              <li className="flex items-start gap-3 text-sm text-dark-400">
-                <div className="w-8 h-8 rounded-lg bg-kpatrol-500/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-4 h-4 text-kpatrol-400" />
+              <li className="flex items-start gap-3 text-sm text-slate-400">
+                <div className="w-8 h-8 rounded-lg bg-cyan-500/15 ring-1 ring-cyan-400/40 shadow-[0_0_10px_rgba(34,211,238,0.2)] flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-4 h-4 text-cyan-300" />
                 </div>
                 <div>
-                  <p className="text-dark-500 text-xs mb-0.5">Địa chỉ</p>
-                  <p>TP. Hồ Chí Minh, Việt Nam</p>
+                  <p className="label-hud text-slate-500 mb-0.5">{t('footer.contactInfo.address')}</p>
+                  <p>{t('footer.contactInfo.addressValue')}</p>
                 </div>
               </li>
             </ul>
@@ -307,28 +325,33 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative border-t border-white/5">
+      <div className="relative border-t border-cyan-500/15">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-dark-500 text-sm flex items-center gap-1">
-              © 2025 K-Patrol. Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> in Vietnam
-            </p>
-            
+            <div className="flex flex-col sm:flex-row items-center gap-2 text-slate-500 text-sm">
+              <p>{t('footer.copyright')}</p>
+              <span className="hidden sm:inline text-slate-700">•</span>
+              <p>
+                {locale === 'vi' ? 'Phát triển bởi' : 'Crafted by'}{' '}
+                <span className="font-black text-cyan-300 uppercase tracking-widest text-xs">Vu Dang Khoa</span>
+              </p>
+            </div>
+
             <div className="flex flex-wrap justify-center gap-6">
-              <Link href="#" className="text-sm text-dark-500 hover:text-kpatrol-400 transition-colors">
-                Điều khoản sử dụng
+              <Link href="#" className="text-sm text-slate-500 hover:text-cyan-200 transition-colors">
+                {t('footer.terms')}
               </Link>
-              <Link href="#" className="text-sm text-dark-500 hover:text-kpatrol-400 transition-colors">
-                Chính sách bảo mật
+              <Link href="#" className="text-sm text-slate-500 hover:text-cyan-200 transition-colors">
+                {t('footer.privacy')}
               </Link>
-              <Link href="#" className="text-sm text-dark-500 hover:text-kpatrol-400 transition-colors">
-                Cookie
+              <Link href="#" className="text-sm text-slate-500 hover:text-cyan-200 transition-colors">
+                {t('footer.cookies')}
               </Link>
-              <Link 
-                href="#" 
-                className="text-sm text-dark-500 hover:text-kpatrol-400 transition-colors inline-flex items-center gap-1"
+              <Link
+                href="#"
+                className="text-sm text-slate-500 hover:text-cyan-200 transition-colors inline-flex items-center gap-1"
               >
-                Sitemap
+                {t('footer.sitemap')}
                 <ArrowUpRight className="w-3 h-3" />
               </Link>
             </div>
@@ -340,7 +363,7 @@ export function Footer() {
       <div className="absolute bottom-24 right-8 hidden lg:block">
         <motion.button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="w-12 h-12 rounded-full glass border border-white/10 flex items-center justify-center text-dark-400 hover:text-white hover:border-kpatrol-500/50 transition-all"
+          className="w-12 h-12 rounded-full bg-slate-900/70 backdrop-blur-md ring-1 ring-cyan-500/25 flex items-center justify-center text-cyan-100 hover:text-white hover:ring-cyan-400/55 hover:bg-cyan-500/10 shadow-[0_0_18px_rgba(34,211,238,0.2)] transition-all"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
