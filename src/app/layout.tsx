@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import { Toaster } from '@/components/ui/Toaster';
+import { LiveChatWidget } from '@/components/features/LiveChatWidget';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -13,13 +15,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'K-Patrol | Robot Tuần Tra Thông Minh',
-  description: 'Hệ sinh thái Robot tuần tra thông minh tích hợp AIoT. Giám sát an ninh 24/7 với công nghệ AI tiên tiến.',
-  keywords: ['robot', 'tuần tra', 'an ninh', 'AIoT', 'giám sát', 'thông minh'],
+  title: 'K-Patrol | Smart Security Patrol Robot',
+  description: 'Smart patrol robot ecosystem integrated with AIoT. 24/7 security monitoring with advanced AI technology.',
+  keywords: ['robot', 'patrol', 'security', 'AIoT', 'surveillance', 'smart'],
   authors: [{ name: 'K-Patrol Team' }],
   openGraph: {
-    title: 'K-Patrol | Robot Tuần Tra Thông Minh',
-    description: 'Hệ sinh thái Robot tuần tra thông minh tích hợp AIoT',
+    title: 'K-Patrol | Smart Security Patrol Robot',
+    description: 'Smart patrol robot ecosystem integrated with AIoT',
     type: 'website',
     locale: 'vi_VN',
   },
@@ -31,9 +33,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+    <html lang="vi" className="dark">
+      <head>
+        <link rel="preconnect" href="https://a.tile.openstreetmap.org" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://b.tile.openstreetmap.org" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://c.tile.openstreetmap.org" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://tile.openstreetmap.org" />
+      </head>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-slate-950 text-slate-100`}>
         {children}
+        <Toaster />
+        <LiveChatWidget />
       </body>
     </html>
   );
