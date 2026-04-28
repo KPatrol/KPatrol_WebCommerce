@@ -2,22 +2,24 @@
 const nextConfig = {
   reactStrictMode: true,
   
-  // Static export for Netlify deployment
-  output: 'export',
-  
   // Trailing slash for better static hosting
   trailingSlash: true,
   
-  // Image optimization (disabled for static export)
+  // Image optimization
   images: {
-    unoptimized: true,
+    unoptimized: process.env.DOCKER_BUILD !== 'true',
     domains: ['localhost', 'images.unsplash.com'],
   },
   
   // Environment variables
   env: {
-    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://kpatrol.io',
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://kpatrol.khoavd.online',
   },
+  
+  // Output configuration
+  // - 'standalone' for Docker deployment (server-side rendering)
+  // - 'export' for Netlify static hosting
+  output: process.env.DOCKER_BUILD === 'true' ? 'standalone' : 'export',
 };
 
 module.exports = nextConfig;
