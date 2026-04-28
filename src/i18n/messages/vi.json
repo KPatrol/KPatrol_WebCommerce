@@ -1,0 +1,879 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "features": "Tính năng",
+    "products": "Sản phẩm",
+    "pricing": "Bảng giá",
+    "demo": "Demo",
+    "contact": "Liên hệ",
+    "getStarted": "Bắt đầu",
+    "bookDemo": "Đặt lịch Demo",
+    "liveDemo": "Live Demo",
+    "useCases": "Ứng dụng",
+    "viewDemo": "Xem Demo",
+    "orderNow": "Đặt hàng ngay",
+    "hotlineSupport": "Hotline hỗ trợ",
+    "testimonials": "Đánh giá",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "badge": "Công nghệ AIoT tiên tiến",
+    "title": "Robot Tuần Tra",
+    "subtitle": "Thông Minh",
+    "description": "Giải pháp giám sát an ninh 24/7 với AI nhận diện thông minh. Di chuyển linh hoạt với bánh xe Mecanum, điều khiển từ xa qua Internet.",
+    "stats": {
+      "uptime": {
+        "value": "24/7",
+        "label": "Vận hành liên tục"
+      },
+      "latency": {
+        "value": "4WD",
+        "label": "Bánh Mecanum đa hướng"
+      },
+      "accuracy": {
+        "value": "AI",
+        "label": "Nhận diện thời gian thực"
+      }
+    },
+    "cta": {
+      "primary": "Liên hệ tư vấn",
+      "secondary": "Xem demo"
+    },
+    "scrollHint": "Khám phá thêm"
+  },
+  "features": {
+    "badge": "Tính năng nổi bật",
+    "title": "Công nghệ",
+    "titleHighlight": "vượt trội",
+    "description": "K-Patrol được trang bị những công nghệ tiên tiến nhất, mang đến giải pháp giám sát an ninh toàn diện và thông minh.",
+    "stats": {
+      "features": "Tính năng chính",
+      "uptime": "Hoạt động",
+      "latency": "Độ trễ",
+      "reliability": "Uptime"
+    },
+    "list": {
+      "ai": {
+        "title": "AI Nhận Diện",
+        "description": "Công nghệ AI tiên tiến nhận diện người, phương tiện và bất thường trong thời gian thực"
+      },
+      "night": {
+        "title": "Quan Sát Ban Đêm",
+        "description": "Camera hồng ngoại và ánh sáng thông minh cho tầm nhìn hoàn hảo trong bóng tối"
+      },
+      "patrol": {
+        "title": "Tuần Tra Tự Động",
+        "description": "Lộ trình tuần tra được tối ưu hóa với khả năng tự động tránh vật cản"
+      },
+      "alert": {
+        "title": "Cảnh Báo Tức Thì",
+        "description": "Thông báo real-time qua app và email khi phát hiện mối nguy hiểm"
+      },
+      "cloud": {
+        "title": "Lưu Trữ Cloud",
+        "description": "Dữ liệu video và báo cáo được lưu trữ an toàn trên cloud"
+      },
+      "control": {
+        "title": "Điều Khiển Từ Xa",
+        "description": "Kiểm soát và giám sát robot mọi lúc mọi nơi qua ứng dụng mobile"
+      }
+    }
+  },
+  "useCases": {
+    "badge": "🏢 Ứng dụng",
+    "title": "Giải Pháp Cho Mọi Ngành",
+    "subtitle": "Robot tuần tra phù hợp với nhiều lĩnh vực khác nhau",
+    "consultCTA": "Liên hệ tư vấn miễn phí",
+    "heading": "Phù hợp mọi ",
+    "headingHighlight": "môi trường",
+    "benefitsLabel": "Lợi ích nổi bật:",
+    "trustedCustomers": "Khách hàng tin dùng",
+    "haveProject": "Bạn có dự án cần giám sát?",
+    "list": {
+      "office": {
+        "title": "Tòa nhà văn phòng",
+        "shortDescription": "Tuần tra hành lang, kiểm tra phòng họp, giám sát khu vực ra vào.",
+        "fullDescription": "K-Patrol giám sát tự động các tầng văn phòng, phát hiện người lạ ngoài giờ làm việc, và gửi cảnh báo real-time cho bảo vệ.",
+        "benefit1": "Giảm 70% chi phí bảo vệ",
+        "benefit2": "Hoạt động 24/7 không gián đoạn",
+        "benefit3": "Tích hợp hệ thống access control",
+        "stats": {
+          "value": "500+",
+          "label": "Tòa nhà"
+        }
+      },
+      "warehouse": {
+        "title": "Nhà kho & Logistics",
+        "shortDescription": "Giám sát hàng hóa, phát hiện xâm nhập, kiểm tra an toàn 24/7.",
+        "fullDescription": "Tự động tuần tra theo lịch trình, kiểm tra hàng hóa bằng AI, phát hiện cháy nổ và đột nhập sớm nhất.",
+        "benefit1": "Phát hiện mất mát ngay lập tức",
+        "benefit2": "Kiểm tra tồn kho tự động",
+        "benefit3": "Cảnh báo cháy nổ sớm",
+        "stats": {
+          "value": "24/7",
+          "label": "Giám sát"
+        }
+      },
+      "home": {
+        "title": "Biệt thự & Căn hộ",
+        "shortDescription": "Bảo vệ gia đình, tuần tra sân vườn, cảnh báo người lạ.",
+        "fullDescription": "Robot thông minh bảo vệ ngôi nhà của bạn. Nhận diện khuôn mặt gia đình, cảnh báo người lạ qua app.",
+        "benefit1": "Nhận diện khuôn mặt gia đình",
+        "benefit2": "Cảnh báo push notification",
+        "benefit3": "Điều khiển từ xa mọi lúc",
+        "stats": {
+          "value": "99.9%",
+          "label": "Chính xác"
+        }
+      },
+      "hospital": {
+        "title": "Bệnh viện & Y tế",
+        "shortDescription": "Giám sát hành lang, hỗ trợ y tế, đảm bảo an toàn bệnh nhân.",
+        "fullDescription": "Tuần tra các khu vực bệnh viện, kiểm tra an ninh ban đêm, hỗ trợ dẫn đường cho bệnh nhân và người nhà.",
+        "benefit1": "Không tiếp xúc, giảm lây nhiễm",
+        "benefit2": "Hoạt động yên tĩnh",
+        "benefit3": "Hỗ trợ dẫn đường",
+        "stats": {
+          "value": "50+",
+          "label": "Bệnh viện"
+        }
+      },
+      "school": {
+        "title": "Trường học & Campus",
+        "shortDescription": "Đảm bảo an toàn khuôn viên, giám sát giờ tan học.",
+        "fullDescription": "Tuần tra khuôn viên trường, giám sát khu vực cổng trường, phát hiện và cảnh báo hành vi bất thường.",
+        "benefit1": "An toàn cho học sinh",
+        "benefit2": "Giám sát cổng trường",
+        "benefit3": "Báo cáo realtime",
+        "stats": {
+          "value": "100+",
+          "label": "Trường học"
+        }
+      },
+      "factory": {
+        "title": "Nhà máy sản xuất",
+        "shortDescription": "Giám sát dây chuyền, phát hiện sự cố, kiểm tra an toàn.",
+        "fullDescription": "Tuần tra nhà máy 24/7, phát hiện sự cố dây chuyền, đảm bảo an toàn lao động và phòng chống cháy nổ.",
+        "benefit1": "Phát hiện sự cố sớm",
+        "benefit2": "Giảm thời gian downtime",
+        "benefit3": "An toàn lao động",
+        "stats": {
+          "value": "200+",
+          "label": "Nhà máy"
+        }
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "⭐ Đánh giá",
+    "title": "Khách Hàng Nói Gì",
+    "subtitle": "Hơn 100+ doanh nghiệp tin tưởng sử dụng giải pháp của chúng tôi",
+    "stats": {
+      "customers": {
+        "value": "500+",
+        "label": "Khách hàng tin dùng"
+      },
+      "satisfaction": {
+        "value": "98%",
+        "label": "Tỷ lệ hài lòng"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Hỗ trợ kỹ thuật"
+      },
+      "rating": {
+        "value": "4.9/5",
+        "label": "Đánh giá trung bình"
+      }
+    },
+    "list": [
+      {
+        "id": 1,
+        "name": "Nguyễn Văn Minh",
+        "role": "Giám đốc An ninh",
+        "company": "Vingroup",
+        "content": "K-Patrol đã thay đổi hoàn toàn cách chúng tôi quản lý an ninh. Hệ thống AI phát hiện xâm nhập cực kỳ chính xác, giúp giảm 80% chi phí bảo vệ 24/7. Đầu tư xứng đáng!",
+        "highlight": "Giảm 80% chi phí bảo vệ",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "name": "Trần Thị Hương",
+        "role": "Chủ biệt thự",
+        "company": "Khu đô thị Phú Mỹ Hưng",
+        "content": "Là một phụ nữ sống một mình, K-Patrol cho tôi cảm giác an toàn tuyệt đối. Tôi có thể theo dõi mọi ngóc ngách trong nhà qua điện thoại, kể cả khi đi công tác xa.",
+        "highlight": "An toàn tuyệt đối",
+        "rating": 5
+      },
+      {
+        "id": 3,
+        "name": "Lê Hoàng Nam",
+        "role": "CEO",
+        "company": "Tech Solutions Vietnam",
+        "content": "Chúng tôi triển khai K-Patrol cho văn phòng 5 tầng. Tích hợp với hệ thống có sẵn rất mượt mà. Đội ngũ support nhiệt tình, phản hồi nhanh chóng.",
+        "highlight": "Tích hợp mượt mà",
+        "rating": 5
+      },
+      {
+        "id": 4,
+        "name": "Phạm Đức Anh",
+        "role": "Quản lý kho",
+        "company": "Logistics VN",
+        "content": "K-Patrol tuần tra kho hàng 24/7, phát hiện cháy và rò rỉ sớm. Đã cứu chúng tôi khỏi một vụ cháy tiềm năng nhờ cảnh báo kịp thời. Sản phẩm cứu mạng!",
+        "highlight": "Cảnh báo kịp thời",
+        "rating": 5
+      },
+      {
+        "id": 5,
+        "name": "Võ Minh Châu",
+        "role": "Giám đốc Resort",
+        "company": "Fusion Maia Danang",
+        "content": "Khách du lịch rất ấn tượng với robot an ninh của chúng tôi. Vừa đảm bảo an toàn, vừa tạo điểm nhấn công nghệ cho resort. ROI sau 6 tháng đã thấy rõ.",
+        "highlight": "ROI trong 6 tháng",
+        "rating": 5
+      }
+    ]
+  },
+  "pricing": {
+    "badge": "💰 Bảng giá",
+    "title": "Gói Dịch Vụ Linh Hoạt",
+    "subtitle": "Chọn gói phù hợp với nhu cầu và ngân sách của bạn",
+    "monthly": "Hàng tháng",
+    "yearly": "Hàng năm",
+    "yearlyDiscount": "Tiết kiệm 20%",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Phù hợp cho doanh nghiệp nhỏ",
+        "price": "15.000.000",
+        "period": "/tháng",
+        "features": [
+          "1 Robot tuần tra",
+          "Tuần tra tự động cơ bản",
+          "Camera HD",
+          "Cảnh báo real-time",
+          "Lưu trữ 7 ngày",
+          "Hỗ trợ email"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Tốt nhất cho doanh nghiệp vừa",
+        "price": "35.000.000",
+        "period": "/tháng",
+        "popular": true,
+        "features": [
+          "3 Robot tuần tra",
+          "AI nhận diện nâng cao",
+          "Camera 4K + Night Vision",
+          "Cảnh báo đa kênh",
+          "Lưu trữ 30 ngày",
+          "Hỗ trợ 24/7",
+          "Báo cáo chi tiết",
+          "API tích hợp"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Giải pháp toàn diện cho tập đoàn",
+        "price": "Liên hệ",
+        "period": "",
+        "features": [
+          "Không giới hạn robot",
+          "AI tùy chỉnh",
+          "Phần cứng cao cấp",
+          "Tích hợp hệ thống riêng",
+          "Lưu trữ không giới hạn",
+          "Quản lý tài khoản chuyên dụng",
+          "SLA 99.99%",
+          "Đào tạo & triển khai"
+        ]
+      }
+    },
+    "cta": "Bắt đầu ngay",
+    "ctaEnterprise": "Liên hệ tư vấn"
+  },
+  "faq": {
+    "badge": "❓ Câu hỏi thường gặp",
+    "title": "Giải Đáp Thắc Mắc",
+    "subtitle": "Tìm câu trả lời cho những câu hỏi phổ biến về robot tuần tra",
+    "items": {
+      "q1": {
+        "question": "Robot hoạt động bao lâu với một lần sạc?",
+        "answer": "Robot có thể hoạt động liên tục 8-10 giờ với pin đầy. Khi pin xuống dưới 20%, robot tự động về trạm sạc và tiếp tục tuần tra sau khi sạc đầy."
+      },
+      "q2": {
+        "question": "Robot có thể hoạt động trong điều kiện thời tiết xấu không?",
+        "answer": "Có, robot được thiết kế chống nước IP65, có thể hoạt động trong mưa nhỏ và môi trường ẩm ướt. Tuy nhiên, không khuyến khích sử dụng trong mưa bão lớn."
+      },
+      "q3": {
+        "question": "Cần bao lâu để cài đặt và triển khai hệ thống?",
+        "answer": "Quá trình cài đặt thường mất 2-3 ngày bao gồm khảo sát địa điểm, lắp đặt phần cứng, cấu hình phần mềm và đào tạo vận hành. Đối với hệ thống lớn có thể mất 1-2 tuần."
+      },
+      "q4": {
+        "question": "Dữ liệu video có được mã hóa và bảo mật không?",
+        "answer": "Tất cả dữ liệu video được mã hóa AES-256 trong quá trình truyền tải và lưu trữ. Chúng tôi tuân thủ các tiêu chuẩn bảo mật quốc tế và GDPR để bảo vệ quyền riêng tư."
+      },
+      "q5": {
+        "question": "Robot có thể tránh vật cản và di chuyển an toàn không?",
+        "answer": "Robot được trang bị nhiều cảm biến siêu âm, camera 360 độ và thuật toán SLAM để phát hiện và tránh vật cản. Hệ thống đảm bảo di chuyển an toàn và không va chạm."
+      },
+      "q6": {
+        "question": "Tôi có thể điều khiển robot từ xa không?",
+        "answer": "Có, bạn có thể điều khiển robot trực tiếp qua ứng dụng mobile hoặc web interface. Bạn có thể xem camera real-time, điều hướng thủ công và cấu hình lộ trình tuần tra."
+      }
+    }
+  },
+  "contact": {
+    "badge": "📞 Liên hệ",
+    "title": "Bắt Đầu Hành Trình",
+    "subtitle": "Để lại thông tin, chúng tôi sẽ liên hệ tư vấn chi tiết trong 24h",
+    "form": {
+      "name": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "company": "Công ty",
+      "message": "Nội dung",
+      "submit": "Gửi yêu cầu",
+      "submitting": "Đang gửi...",
+      "success": "Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm.",
+      "error": "Có lỗi xảy ra. Vui lòng thử lại."
+    },
+    "info": {
+      "address": "Địa chỉ",
+      "addressValue": "123 Đường Nguyễn Huệ, Quận 1, TP.HCM",
+      "email": "Email",
+      "emailValue": "contact@kpatrol.vn",
+      "phone": "Điện thoại",
+      "phoneValue": "+84 28 1234 5678",
+      "hours": "Giờ làm việc",
+      "hoursValue": "T2-T6: 8:00 - 18:00"
+    }
+  },
+  "cta": {
+    "badge": "🎯 Sẵn sàng bắt đầu?",
+    "title": "Nâng Cấp An Ninh",
+    "titleHighlight": "Ngay Hôm Nay",
+    "subtitle": "Trải nghiệm giải pháp robot tuần tra thông minh trong 30 ngày miễn phí",
+    "description": "Trải nghiệm giải pháp robot tuần tra thông minh với công nghệ AI tiên tiến. Bảo vệ tài sản 24/7 với hiệu quả vượt trội.",
+    "primary": "Dùng thử miễn phí",
+    "secondary": "Liên hệ tư vấn",
+    "packageBadge": "Gói Hoàn Chỉnh",
+    "price": "Liên hệ",
+    "currency": "VNĐ",
+    "priceDescription": "Bao gồm mọi thứ bạn cần để bắt đầu",
+    "orderButton": "Đặt hàng ngay",
+    "features": {
+      "robot": "1 Robot tuần tra thông minh K-Patrol",
+      "ai": "Hệ thống AI nhận diện và cảnh báo",
+      "app": "Ứng dụng quản lý di động iOS/Android",
+      "cloud": "Lưu trữ đám mây 6 tháng",
+      "warranty": "Bảo hành 12 tháng chính hãng",
+      "setup": "Hỗ trợ cài đặt & đào tạo miễn phí",
+      "support": "Hỗ trợ kỹ thuật 24/7",
+      "update": "Cập nhật phần mềm trọn đời"
+    },
+    "guarantees": {
+      "warranty": "Bảo hành 12 tháng",
+      "delivery": "Giao hàng trong 7 ngày",
+      "support": "Hỗ trợ 24/7"
+    },
+    "contact": {
+      "email": {
+        "label": "Email",
+        "value": "contact@kpatrol.khoavd.online"
+      },
+      "phone": {
+        "label": "Hotline",
+        "value": "0822608286"
+      },
+      "address": {
+        "label": "Địa chỉ",
+        "value": "Đại học Phenikaa, Phường Dương Nội, Thành Phố Hà Nội"
+      }
+    },
+    "form": {
+      "title": "Hoặc để lại thông tin",
+      "subtitle": "Chúng tôi sẽ liên hệ tư vấn trong vòng 24 giờ",
+      "successTitle": "Đã gửi thành công!",
+      "successMessage": "Chúng tôi sẽ liên hệ với bạn sớm nhất có thể.",
+      "namePlaceholder": "Họ và tên",
+      "companyPlaceholder": "Tên công ty (tùy chọn)",
+      "emailPlaceholder": "Email của bạn",
+      "phonePlaceholder": "Số điện thoại",
+      "messagePlaceholder": "Nội dung tin nhắn của bạn...",
+      "submitting": "Đang gửi...",
+      "submitButton": "Gửi yêu cầu tư vấn",
+      "agreement": "Bằng việc gửi form, bạn đồng ý với chính sách bảo mật của chúng tôi."
+    }
+  },
+  "specs": {
+    "badge": "Thông số kỹ thuật",
+    "title": "Thiết kế",
+    "titleHighlight": "chuyên nghiệp",
+    "description": "K-Patrol được thiết kế với linh kiện cao cấp, đảm bảo độ bền và hiệu suất vượt trội trong mọi điều kiện.",
+    "diagramTitle": "Technical Diagram",
+    "diagramSubtitle": "3D Model Preview",
+    "software": {
+      "title": "Hệ điều hành & Phần mềm",
+      "description": "Ubuntu 22.04 LTS + ROS2 Humble • Python 3.10 • TensorFlow Lite • Custom firmware ESP32-S3"
+    },
+    "categories": {
+      "hardware": "Phần cứng",
+      "performance": "Hiệu năng",
+      "connectivity": "Kết nối",
+      "camera": "Camera & Sensors"
+    },
+    "hardware": {
+      "dimensions": {
+        "label": "Kích thước",
+        "value": "45 × 35 × 30 cm",
+        "description": "Thiết kế compact"
+      },
+      "weight": {
+        "label": "Trọng lượng",
+        "value": "8 kg",
+        "description": "Nhẹ và linh hoạt"
+      },
+      "mainMcu": {
+        "label": "MCU chính",
+        "value": "Raspberry Pi 4",
+        "description": "8GB RAM"
+      },
+      "motorController": {
+        "label": "Motor Controller",
+        "value": "ESP32-S3",
+        "description": "WiFi + BLE"
+      },
+      "aiAccelerator": {
+        "label": "AI Accelerator",
+        "value": "Coral Edge TPU",
+        "description": "4 TOPS"
+      },
+      "motors": {
+        "label": "Động cơ",
+        "value": "4× DC Motor",
+        "description": "Encoder tích hợp"
+      }
+    },
+    "performance": {
+      "maxSpeed": {
+        "label": "Tốc độ tối đa",
+        "value": "1.2 m/s",
+        "description": "Điều chỉnh được"
+      },
+      "battery": {
+        "label": "Pin",
+        "value": "5200mAh",
+        "description": "Li-ion cao cấp"
+      },
+      "runtime": {
+        "label": "Thời gian hoạt động",
+        "value": "4-6 giờ",
+        "description": "Tuỳ chế độ"
+      },
+      "latency": {
+        "label": "Độ trễ điều khiển",
+        "value": "<500ms",
+        "description": "Real-time"
+      },
+      "aiProcessing": {
+        "label": "Xử lý AI",
+        "value": "30 FPS",
+        "description": "Object detection"
+      },
+      "accuracy": {
+        "label": "Độ chính xác",
+        "value": "99.9%",
+        "description": "AI recognition"
+      }
+    },
+    "connectivity": {
+      "wifi": {
+        "label": "WiFi",
+        "value": "Dual-band 5GHz",
+        "description": "802.11ac"
+      },
+      "cellular": {
+        "label": "Cellular",
+        "value": "4G LTE",
+        "description": "SIM support"
+      },
+      "videoStream": {
+        "label": "Video Stream",
+        "value": "WebRTC",
+        "description": "<500ms latency"
+      },
+      "cloud": {
+        "label": "Cloud",
+        "value": "AWS IoT",
+        "description": "Secure MQTT"
+      },
+      "app": {
+        "label": "App",
+        "value": "iOS & Android",
+        "description": "Cross-platform"
+      },
+      "api": {
+        "label": "API",
+        "value": "REST + WebSocket",
+        "description": "Real-time"
+      }
+    },
+    "camera": {
+      "mainCamera": {
+        "label": "Camera chính",
+        "value": "1080p @ 30fps",
+        "description": "Wide angle"
+      },
+      "nightVision": {
+        "label": "Night Vision",
+        "value": "IR LED",
+        "description": "Tự động bật"
+      },
+      "lidar": {
+        "label": "LiDAR",
+        "value": "RPLiDAR A1",
+        "description": "360° scanning"
+      },
+      "imu": {
+        "label": "IMU",
+        "value": "MPU6050",
+        "description": "6-axis"
+      },
+      "ultrasonic": {
+        "label": "Ultrasonic",
+        "value": "4× HC-SR04",
+        "description": "Obstacle detect"
+      },
+      "encoder": {
+        "label": "Encoder",
+        "value": "Optical",
+        "description": "High precision"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "tagline": "Robot Tuần Tra Thông Minh",
+      "description": "Giải pháp robot tuần tra an ninh thông minh hàng đầu Việt Nam. Bảo vệ tài sản của bạn 24/7 với công nghệ AI tiên tiến."
+    },
+    "newsletter": {
+      "title": "Nhận Tin Mới Nhất",
+      "description": "Đăng ký để nhận thông tin về sản phẩm mới và ưu đãi đặc biệt",
+      "placeholder": "Nhập email của bạn",
+      "button": "Đăng ký",
+      "subscribing": "Đang đăng ký...",
+      "success": "Cảm ơn bạn đã đăng ký!"
+    },
+    "product": "Sản phẩm",
+    "features": "Tính năng",
+    "specifications": "Thông số kỹ thuật",
+    "pricing": "Bảng giá",
+    "demo": "Demo",
+    "company": "Công ty",
+    "about": "Về chúng tôi",
+    "careers": "Tuyển dụng",
+    "blog": "Blog",
+    "press": "Báo chí",
+    "support": "Hỗ trợ",
+    "documentation": "Tài liệu",
+    "apiReference": "API Reference",
+    "community": "Cộng đồng",
+    "contact": "Liên hệ",
+    "contactInfo": {
+      "email": "Email",
+      "emailValue": "contact@kpatrol.khoavd.online",
+      "hotline": "Hotline",
+      "hotlineValue": "0822608286",
+      "address": "Địa chỉ",
+      "addressValue": "Đại học Phenikaa, Phường Dương Nội, Thành Phố Hà Nội"
+    },
+    "legal": "Pháp lý",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ",
+    "cookies": "Cookies",
+    "sitemap": "Sơ đồ trang",
+    "copyright": "© 2026 K-Patrol. Bản quyền đã được bảo hộ.",
+    "madeWith": "Được phát triển với",
+    "madeWithLove": "tình yêu",
+    "in": "tại Việt Nam"
+  },
+  "demo": {
+    "badge": "🎮 Demo",
+    "title": "Trải Nghiệm Robot",
+    "subtitle": "Đặt lịch demo trực tiếp hoặc xem video giới thiệu chi tiết",
+    "bookTitle": "Đặt Lịch Demo",
+    "bookDescription": "Chúng tôi sẽ đến trực tiếp để demo robot tại địa điểm của bạn",
+    "videoTitle": "Video Demo",
+    "videoDescription": "Xem robot hoạt động trong các tình huống thực tế"
+  },
+  "partners": {
+    "title": "Đối tác &",
+    "titleHighlight": "Chứng nhận",
+    "description": "Được tin dùng bởi các doanh nghiệp hàng đầu và đạt các chứng nhận quốc tế.",
+    "certifications": {
+      "iso27001": {
+        "title": "ISO 27001",
+        "description": "Chứng nhận an toàn thông tin"
+      },
+      "ce": {
+        "title": "CE Marking",
+        "description": "Tiêu chuẩn châu Âu"
+      },
+      "madeInVietnam": {
+        "title": "Made in Vietnam",
+        "description": "Sản xuất tại Việt Nam"
+      },
+      "rohs": {
+        "title": "RoHS Compliant",
+        "description": "Thân thiện môi trường"
+      }
+    },
+    "paymentText": "Thanh toán an toàn với"
+  },
+  "notification": {
+    "success": "Thành công!",
+    "error": "Lỗi!",
+    "warning": "Cảnh báo!",
+    "info": "Thông tin",
+    "formSubmitted": "Biểu mẫu đã được gửi thành công",
+    "formError": "Có lỗi xảy ra khi gửi biểu mẫu",
+    "emailSent": "Email đã được gửi",
+    "demoBooked": "Đã đặt lịch demo thành công",
+    "copiedToClipboard": "Đã sao chép vào clipboard"
+  },
+  "liveMap": {
+    "badge": "Live Patrol Demo",
+    "title": "Theo dõi",
+    "titleHighlight": "thời gian thực",
+    "description": "Robot tuần tra theo lộ trình đã lập, phát hiện bất thường — tự chụp ảnh và cảnh báo ngay lập tức tới điện thoại của bạn.",
+    "patrolMode": "Patrol Mode",
+    "telemetry": {
+      "battery": "Pin",
+      "heading": "Heading",
+      "speed": "Tốc độ",
+      "signal": "Tín hiệu"
+    },
+    "eventsToday": "Sự kiện hôm nay",
+    "live": "Live",
+    "autoCapture": "Robot tự động chụp ảnh & gửi cảnh báo",
+    "events": [
+      {
+        "label": "Phát hiện người",
+        "time": "14:23"
+      },
+      {
+        "label": "Cảnh báo cháy",
+        "time": "14:31"
+      },
+      {
+        "label": "Chuyển động bất thường",
+        "time": "14:45"
+      }
+    ],
+    "stats": [
+      {
+        "v": "24/7",
+        "l": "Hoạt động"
+      },
+      {
+        "v": "3.2km",
+        "l": "Đã tuần"
+      },
+      {
+        "v": "18",
+        "l": "Sự kiện"
+      }
+    ]
+  },
+  "featuresBento": {
+    "badge": "AI & Phần cứng",
+    "title": "Được thiết kế cho",
+    "titleHighlight": "an ninh thông minh",
+    "description": "Kết hợp Raspberry Pi 4 Model B + YOLOv8 + MQTT — mỗi tính năng được tối ưu để phát hiện chính xác & phản ứng tức thì.",
+    "person": {
+      "tag": "YOLOv8n",
+      "titleLine1": "Phát hiện người",
+      "titleLine2": "tự động chụp ảnh",
+      "description": "AI chạy on-device phát hiện người trong khu vực cấm, tự động chụp ảnh HD và gửi cảnh báo qua MQTT tới điện thoại trong <500ms.",
+      "tags": [
+        "Edge AI",
+        "No cloud",
+        "GDPR safe"
+      ]
+    },
+    "fire": {
+      "title": "Cảnh báo cháy",
+      "description": "Nhận diện lửa & khói bằng AI, gửi SOS kèm toạ độ tới quản lý & cứu hoả."
+    },
+    "mapLive": {
+      "title": "Bản đồ live",
+      "description": "Theo dõi vị trí robot, trajectory & điểm nóng trên web/mobile theo thời gian thực."
+    },
+    "specs": {
+      "title": "Thông số",
+      "items": [
+        {
+          "k": "CPU",
+          "v": "Raspberry Pi 4B · ARM"
+        },
+        {
+          "k": "MCU",
+          "v": "ESP32 Dual-core"
+        },
+        {
+          "k": "Pin",
+          "v": "12V 10Ah · 8h"
+        },
+        {
+          "k": "Cảm biến",
+          "v": "Line × 5 · IMU"
+        },
+        {
+          "k": "Kết nối",
+          "v": "WiFi · MQTT · BLE"
+        },
+        {
+          "k": "Camera",
+          "v": "1080p · IR night"
+        },
+        {
+          "k": "Kích thước",
+          "v": "28 × 22 × 18 cm"
+        },
+        {
+          "k": "Tốc độ",
+          "v": "0.5 m/s cruise"
+        }
+      ]
+    },
+    "cameraHd": {
+      "title": "Camera HD + IR",
+      "description": "Ghi hình 1080p ban ngày, hồng ngoại ban đêm — lưu snapshot tự động vào cloud."
+    },
+    "mqtt": {
+      "title": "MQTT <100ms",
+      "description": "Giao thức nhẹ, độ trễ siêu thấp — lệnh điều khiển & telemetry real-time."
+    },
+    "secure": {
+      "title": "Bảo mật TLS",
+      "description": "Dữ liệu mã hoá TLS 1.3, JWT auth, log audit — tuân thủ chuẩn doanh nghiệp."
+    },
+    "autoCharge": {
+      "title": "Tự động sạc",
+      "description": "Khi pin <20%, robot tự về dock sạc — không cần can thiệp thủ công."
+    }
+  },
+  "pricingFaq": {
+    "badge": "Gói phù hợp mọi quy mô",
+    "title": "Chọn gói",
+    "titleHighlight": "phù hợp với bạn",
+    "subtitle": "Không phí ẩn. Không hợp đồng rắc rối. Minh bạch — hoàn tiền 30 ngày nếu không hài lòng.",
+    "popular": "Phổ biến nhất",
+    "plans": [
+      {
+        "name": "Starter",
+        "tagline": "Cho gia đình & cửa hàng nhỏ",
+        "price": "14.900.000",
+        "unit": "VNĐ",
+        "features": [
+          "1 Robot K-Patrol V10",
+          "Mobile app iOS/Android",
+          "Phát hiện người & cảnh báo",
+          "Lưu trữ 7 ngày",
+          "Hỗ trợ 12 tháng"
+        ],
+        "cta": "Đặt hàng",
+        "highlighted": false
+      },
+      {
+        "name": "Pro",
+        "tagline": "Văn phòng & kho xưởng vừa",
+        "price": "24.900.000",
+        "unit": "VNĐ",
+        "features": [
+          "Mọi thứ của Starter",
+          "Phát hiện cháy bằng AI",
+          "Lưu cloud 30 ngày",
+          "Multi-zone patrol",
+          "Web dashboard quản lý",
+          "Hỗ trợ 24 tháng"
+        ],
+        "cta": "Được chọn nhiều",
+        "highlighted": true
+      },
+      {
+        "name": "Enterprise",
+        "tagline": "Toà nhà & chuỗi quy mô lớn",
+        "price": "Liên hệ",
+        "unit": "",
+        "features": [
+          "Mọi thứ của Pro",
+          "Nhiều robot & bản đồ lớn",
+          "API & SSO tích hợp",
+          "SLA 99.9% uptime",
+          "On-site training",
+          "Hỗ trợ trọn đời"
+        ],
+        "cta": "Nhận báo giá",
+        "highlighted": false
+      }
+    ],
+    "faq": {
+      "title": "Câu hỏi",
+      "titleHighlight": "thường gặp",
+      "subtitle": "Không thấy câu hỏi? Liên hệ hotline 0822 608 286.",
+      "items": [
+        {
+          "q": "Robot có hoạt động được trong môi trường tối không?",
+          "a": "Có. K-Patrol V10 trang bị camera hồng ngoại IR và cảm biến dẫn đường độc lập với ánh sáng, hoạt động tốt trong điều kiện 0 lux."
+        },
+        {
+          "q": "AI phát hiện người có chính xác không? Có làm lộ quyền riêng tư?",
+          "a": "YOLOv8n chạy on-device với độ chính xác >95%. Ảnh được xử lý ngay trên Raspberry Pi, chỉ gửi ảnh tới điện thoại chủ khi phát hiện bất thường — không stream lên cloud."
+        },
+        {
+          "q": "Robot có cần WiFi để hoạt động không?",
+          "a": "Robot tuần tra độc lập theo lộ trình đã lập. WiFi chỉ cần để gửi cảnh báo & điều khiển từ xa. Mất mạng robot vẫn chạy bình thường."
+        },
+        {
+          "q": "Pin dùng được bao lâu? Có cần sạc thủ công?",
+          "a": "Pin 12V 10Ah hoạt động ~8 giờ liên tục. Robot tự về dock sạc khi pin <20%, không cần can thiệp."
+        },
+        {
+          "q": "Có thể tự lắp đặt được không hay cần kỹ thuật viên?",
+          "a": "Bản Starter/Pro: khách tự cài đặt qua app trong 15 phút. Bản Enterprise: đội ngũ K-Patrol lắp đặt & training miễn phí."
+        },
+        {
+          "q": "Bảo hành & bảo trì thế nào?",
+          "a": "Bảo hành 12-24 tháng tuỳ gói. Sửa chữa tại chỗ trong nội thành Hà Nội & TP.HCM. Gói Enterprise có SLA phản hồi 4h."
+        }
+      ]
+    }
+  },
+  "contactCta": {
+    "title": "Sẵn sàng để bảo vệ",
+    "titleHighlight": "không gian của bạn?",
+    "description": "Đặt hàng hôm nay — giao hàng toàn quốc trong 5-7 ngày. Hỗ trợ cài đặt miễn phí tại Hà Nội & TP.HCM.",
+    "callNow": "Gọi ngay: 0822 608 286",
+    "viewDemo": "Xem demo",
+    "form": {
+      "nameLabel": "Họ & tên",
+      "namePlaceholder": "Nguyễn Văn A",
+      "phoneLabel": "Số điện thoại",
+      "phonePlaceholder": "0xxx xxx xxx",
+      "messageLabel": "Nhu cầu",
+      "messagePlaceholder": "Tôi muốn tư vấn gói Pro cho văn phòng 200m²...",
+      "submit": "Gửi yêu cầu tư vấn",
+      "submitting": "Đang gửi...",
+      "sent": "Đã gửi — chúng tôi sẽ liên hệ sớm!"
+    },
+    "cards": {
+      "hotline": "Hotline 24/7",
+      "email": "Email",
+      "address": "Địa chỉ",
+      "addressValue": "ĐH Phenikaa, Yên Nghĩa, Hà Nội"
+    }
+  }
+}
