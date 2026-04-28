@@ -12,14 +12,23 @@
     "netlify:build": "npm run build"
   },
   "dependencies": {
+    "@splinetool/react-spline": "^2.2.6",
+    "@types/leaflet": "^1.9.21",
+    "axios": "^1.13.5",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.8",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.344.0",
+    "maplibre-gl": "^5.24.0",
     "next": "14.2.0",
+    "next-intl": "^4.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "framer-motion": "^11.0.8",
-    "lucide-react": "^0.344.0",
-    "clsx": "^2.1.0",
+    "react-leaflet": "^4.2.1",
+    "react-map-gl": "^8.1.1",
+    "sonner": "^2.0.7",
     "tailwind-merge": "^2.2.1",
-    "@splinetool/react-spline": "^2.2.6"
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
     "@types/node": "^20",
