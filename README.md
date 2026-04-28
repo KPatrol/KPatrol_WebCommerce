@@ -1,12 +1,30 @@
-# K-Patrol — Web Commerce
+<p align="center">
+  <img src="docs/logo.png" alt="K-Patrol" width="140" />
+</p>
 
-> Marketing & e-commerce site for the K-Patrol indoor patrol robot platform.
-> Trang giới thiệu sản phẩm và đặt hàng cho hệ sinh thái robot tuần tra K-Patrol.
+<h1 align="center">K-Patrol — Web Commerce</h1>
 
-[![Next.js](https://img.shields.io/badge/Next.js-14.2-black?logo=next.js)](https://nextjs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org)
-[![Tailwind](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwindcss)](https://tailwindcss.com)
-[![License](https://img.shields.io/badge/license-MIT-green)](#license)
+<p align="center">
+  <em>Marketing & e-commerce site for the K-Patrol indoor patrol robot platform.</em><br/>
+  <em>Trang giới thiệu sản phẩm và đặt hàng cho hệ sinh thái robot tuần tra K-Patrol.</em>
+</p>
+
+<p align="center">
+  <a href="https://nextjs.org"><img alt="Next.js" src="https://img.shields.io/badge/Next.js-14.2-black?logo=next.js" /></a>
+  <a href="https://www.typescriptlang.org"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-blue?logo=typescript" /></a>
+  <a href="https://tailwindcss.com"><img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwindcss" /></a>
+  <a href="#license"><img alt="License" src="https://img.shields.io/badge/license-MIT-green" /></a>
+  <a href="https://github.com/KPatrol/KPatrol_WebCommerce"><img alt="Repo" src="https://img.shields.io/badge/repo-KPatrol_WebCommerce-181717?logo=github" /></a>
+</p>
+
+<p align="center">
+  <a href="#overview--tổng-quan">Overview</a> ·
+  <a href="#features">Features</a> ·
+  <a href="#tech-stack">Tech Stack</a> ·
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#deployment">Deployment</a> ·
+  <a href="#license">License</a>
+</p>
 
 ---
 
