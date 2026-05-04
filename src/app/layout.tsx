@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/Toaster';
 import { LiveChatWidget } from '@/components/features/LiveChatWidget';
+import { LangSync } from '@/components/features/LangSync';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -41,6 +42,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://tile.openstreetmap.org" />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-slate-950 text-slate-100`}>
+        <LangSync />
         {children}
         <Toaster />
         <LiveChatWidget />
