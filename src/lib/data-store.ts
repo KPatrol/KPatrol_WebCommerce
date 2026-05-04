@@ -1,6 +1,16 @@
 /**
  * Simple filesystem-based JSON data store for web-commerce.
  * Data is stored in /app/data/ (mountable Docker volume).
+ *
+ * Concurrency model
+ * -----------------
+ * Writes are atomic (temp file + rename) and serialized per-name via an
+ * in-process promise chain. This avoids two concurrent POSTs racing
+ * read-modify-write on the same JSON file and clobbering each other —
+ * a real risk under k6/load tests, less of one under hand-traffic but
+ * cheap enough to fix. Multi-instance deployments would still need a
+ * filesystem lock (proper-lockfile / fcntl), but the commerce site runs
+ * single-instance behind Compose so the promise chain is sufficient.
  */
 import fs from 'fs';
 import path from 'path';
@@ -21,6 +31,24 @@ function filePath(name: string) {
   return path.join(DATA_DIR, `${name}.json`);
 }
 
+// Per-name write queue: chains writes so a second POST waits for the first
+// to land before reading. Keys are file basenames; values are the tail of
+// the in-flight chain (resolves when prior writes have flushed to disk).
+const writeQueues = new Map<string, Promise<void>>();
+
+function enqueueWrite(name: string, work: () => void): Promise<void> {
+  const prev = writeQueues.get(name) ?? Promise.resolve();
+  const next = prev.then(work, work); // run regardless of prior failure
+  writeQueues.set(
+    name,
+    next.finally(() => {
+      // Drop the chain when it's the last in line so we don't pin memory.
+      if (writeQueues.get(name) === next) writeQueues.delete(name);
+    }),
+  );
+  return next;
+}
+
 export function readJSON<T>(name: string, defaultValue: T): T {
   ensureDir();
   const fp = filePath(name);
@@ -37,7 +65,19 @@ export function readJSON<T>(name: string, defaultValue: T): T {
 
 export function writeJSON<T>(name: string, data: T): void {
   ensureDir();
-  fs.writeFileSync(filePath(name), JSON.stringify(data, null, 2), 'utf-8');
+  const fp = filePath(name);
+  // Atomic write via temp + rename so a reader never observes a half-flushed
+  // file. The temp name embeds pid+counter so concurrent calls (which we also
+  // serialize via the queue) cannot collide on the temp path itself.
+  const tmp = `${fp}.${process.pid}.${Date.now()}.${Math.random().toString(36).slice(2, 8)}.tmp`;
+  enqueueWrite(name, () => {
+    fs.writeFileSync(tmp, JSON.stringify(data, null, 2), 'utf-8');
+    fs.renameSync(tmp, fp);
+  }).catch((err) => {
+    // Best-effort cleanup; rename failure leaves a stale .tmp we should drop.
+    try { fs.unlinkSync(tmp); } catch { /* ignore */ }
+    console.error(`[data-store] write failed for ${name}:`, err);
+  });
 }
 
 // ── Product Types ─────────────────────────────────────────────────────────────
