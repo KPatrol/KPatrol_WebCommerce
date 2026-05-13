@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Play, Shield, Cpu, Zap, Bot, Sparkles } from 'lucide-react';
+import { ArrowRight, Play, Shield, Cpu, Zap, Sparkles } from 'lucide-react';
 import { useTranslations } from '@/hooks/useTranslations';
 
 function BackgroundOrbs() {
@@ -38,20 +39,26 @@ function RobotVisualization() {
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
           <motion.div
-            className="relative"
+            className="relative w-64 h-64 md:w-80 md:h-80"
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
           >
             <div
-              className="w-32 h-32 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center ring-1 ring-cyan-300/50"
-              style={{ boxShadow: '0 0 28px rgba(34, 211, 238, 0.7), 0 0 56px rgba(34, 211, 238, 0.35)' }}
-            >
-              <Bot className="w-16 h-16 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]" />
-            </div>
+              className="absolute inset-0 rounded-[2.5rem]"
+              style={{ boxShadow: '0 0 60px rgba(34, 211, 238, 0.45), 0 0 120px rgba(34, 211, 238, 0.25)' }}
+            />
+            <Image
+              src="/robots/robot_main.png"
+              alt="K-Patrol Robot"
+              fill
+              priority
+              sizes="(max-width: 768px) 256px, 320px"
+              className="object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]"
+            />
             <motion.div
-              className="absolute inset-0 rounded-2xl border-2 border-cyan-400"
-              animate={{ scale: [1, 1.45], opacity: [0.7, 0] }}
-              transition={{ duration: 2.4, repeat: Infinity }}
+              className="absolute inset-0 rounded-full border border-cyan-400/50"
+              animate={{ scale: [1, 1.3], opacity: [0.6, 0] }}
+              transition={{ duration: 2.8, repeat: Infinity }}
             />
           </motion.div>
 
