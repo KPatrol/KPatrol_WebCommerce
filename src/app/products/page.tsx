@@ -310,7 +310,7 @@ function InquiryModal({
                         required
                         value={form.name}
                         onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
-                        placeholder="Nguyễn Văn A"
+                        placeholder="Vũ Đăng Khoa"
                         className="w-full bg-slate-900/60 ring-1 ring-cyan-500/20 rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400/60 transition-all"
                       />
                     </div>
