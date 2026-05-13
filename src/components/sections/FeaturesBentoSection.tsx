@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import {
   Brain,
   Camera,
@@ -314,13 +315,36 @@ export function FeaturesBentoSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="md:col-span-2 md:row-span-2 bento-card p-6 min-h-[280px]"
+            className="md:col-span-2 md:row-span-2 bento-card p-6 min-h-[280px] relative overflow-hidden"
           >
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between mb-3">
               <h3 className="text-xl font-black tracking-tight">{t('featuresBento.specs.title')}</h3>
               <Gauge className="w-5 h-5 text-cyan-300" />
             </div>
-            <div className="space-y-3">
+
+            {/* Robot side-view hero */}
+            <div className="relative h-36 md:h-40 mb-4 rounded-xl bg-gradient-to-br from-slate-950/70 to-slate-900/40 ring-1 ring-cyan-500/20 overflow-hidden">
+              <div className="absolute inset-0 bg-grid opacity-30" />
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center"
+                animate={{ y: [0, -4, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/robots/robot_left_view.png"
+                    alt="K-Patrol side view"
+                    fill
+                    sizes="(max-width: 768px) 240px, 280px"
+                    className="object-contain drop-shadow-[0_6px_18px_rgba(34,211,238,0.35)]"
+                  />
+                </div>
+              </motion.div>
+              <div className="absolute bottom-2 left-3 label-hud text-[9px] text-cyan-300/70">SIDE VIEW</div>
+            </div>
+
+            <div className="space-y-2">
               {specs.map((s, i) => (
                 <motion.div
                   key={s.k}
@@ -328,7 +352,7 @@ export function FeaturesBentoSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.04 }}
-                  className="flex items-center justify-between py-2 border-b border-cyan-500/10 last:border-0"
+                  className="flex items-center justify-between py-1.5 border-b border-cyan-500/10 last:border-0"
                 >
                   <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">{s.k}</span>
                   <span className="text-sm font-bold text-cyan-100">{s.v}</span>
@@ -343,13 +367,28 @@ export function FeaturesBentoSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="md:col-span-2 bento-card p-6 min-h-[200px]"
+            className="md:col-span-2 bento-card p-6 min-h-[200px] relative overflow-hidden"
           >
-            <div className="w-12 h-12 rounded-xl bg-sky-500/10 ring-1 ring-sky-400/40 flex items-center justify-center mb-4 shadow-[0_0_18px_rgba(56,189,248,0.25)]">
-              <Camera className="w-6 h-6 text-sky-300" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 blur-3xl rounded-full" />
+
+            {/* Robot main view as faded backdrop on right side */}
+            <div className="absolute -right-6 -bottom-6 w-36 h-36 opacity-30 pointer-events-none">
+              <Image
+                src="/robots/robot_main.png"
+                alt=""
+                fill
+                sizes="144px"
+                className="object-contain"
+              />
             </div>
-            <h3 className="text-xl font-black tracking-tight mb-2">{t('featuresBento.cameraHd.title')}</h3>
-            <p className="text-sm text-slate-400">{t('featuresBento.cameraHd.description')}</p>
+
+            <div className="relative z-10">
+              <div className="w-12 h-12 rounded-xl bg-sky-500/10 ring-1 ring-sky-400/40 flex items-center justify-center mb-4 shadow-[0_0_18px_rgba(56,189,248,0.25)]">
+                <Camera className="w-6 h-6 text-sky-300" />
+              </div>
+              <h3 className="text-xl font-black tracking-tight mb-2">{t('featuresBento.cameraHd.title')}</h3>
+              <p className="text-sm text-slate-400">{t('featuresBento.cameraHd.description')}</p>
+            </div>
           </motion.div>
 
           {/* 6. MQTT */}
