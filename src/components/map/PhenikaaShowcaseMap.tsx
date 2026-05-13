@@ -106,11 +106,12 @@ function injectStyles() {
       color: #fff;
     }
 
-    /* Tuck attribution into a tiny corner that doesn't conflict with telemetry HUD */
+    /* Tuck attribution into top-left where nothing else lives (PATROL badge sits top-right) */
     .kp-showcase-leaflet .leaflet-bottom.leaflet-right {
       bottom: auto;
-      top: 60px;
-      right: 12px;
+      right: auto;
+      top: 12px;
+      left: 12px;
     }
     .kp-showcase-leaflet .leaflet-control-attribution {
       background: rgba(15, 23, 42, 0.72) !important;
@@ -192,22 +193,34 @@ function injectStyles() {
       font-weight: 800;
     }
 
-    .kp-robot-icon { position: relative; width: 56px; height: 56px; }
+    .kp-robot-icon { position: relative; width: 72px; height: 72px; }
     .kp-robot-icon .ping {
       position: absolute; inset: 0;
       border-radius: 50%;
-      background: rgba(34,211,238,0.22);
+      background: rgba(34,211,238,0.18);
       animation: kp-ping 2.4s ease-out infinite;
     }
-    .kp-robot-icon .ping.delay { inset: 8px; background: rgba(34,211,238,0.36); animation-delay: 0.6s; }
-    .kp-robot-icon .core {
+    .kp-robot-icon .ping.delay { inset: 10px; background: rgba(34,211,238,0.3); animation-delay: 0.6s; }
+    .kp-robot-icon .halo {
       position: absolute; left: 50%; top: 50%;
-      width: 22px; height: 22px;
-      margin: -11px 0 0 -11px;
+      width: 52px; height: 52px;
+      margin: -26px 0 0 -26px;
       border-radius: 50%;
-      background: linear-gradient(135deg,#22d3ee,#2563eb);
-      border: 3px solid #fff;
-      box-shadow: 0 4px 14px rgba(34,211,238,0.7), 0 0 0 1px rgba(255,255,255,0.4);
+      background: radial-gradient(circle, rgba(34,211,238,0.45) 0%, rgba(34,211,238,0.0) 70%);
+      filter: blur(4px);
+    }
+    .kp-robot-icon .body {
+      position: absolute; left: 50%; top: 50%;
+      width: 48px; height: 48px;
+      margin: -24px 0 0 -24px;
+      transition: transform 120ms linear;
+      will-change: transform;
+    }
+    .kp-robot-icon .body img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.55)) drop-shadow(0 0 6px rgba(34,211,238,0.6));
+      pointer-events: none;
     }
   `;
   document.head.appendChild(style);
@@ -236,10 +249,10 @@ function eventDivIcon(color: string, label: string, time: string): L.DivIcon {
 const ROBOT_ICON = (() => {
   if (typeof window === 'undefined') return null;
   return L.divIcon({
-    html: `<div class="kp-robot-icon"><span class="ping"></span><span class="ping delay"></span><span class="core"></span></div>`,
+    html: `<div class="kp-robot-icon"><span class="ping"></span><span class="ping delay"></span><span class="halo"></span><span class="body" data-kp-robot-body><img src="/robots/robot_top_view.png" alt="K-Patrol"/></span></div>`,
     className: 'kp-robot-divicon',
-    iconSize: [56, 56],
-    iconAnchor: [28, 28],
+    iconSize: [72, 72],
+    iconAnchor: [36, 36],
   });
 })();
 
@@ -306,6 +319,19 @@ export default function PhenikaaShowcaseMap({
   useEffect(() => {
     onPositionChange?.(robotPos.lat, robotPos.lng, robotPos.headingDeg);
   }, [robotPos, onPositionChange]);
+
+  // Rotate robot photo to face direction of travel without re-creating the divIcon
+  // (recreating would restart pulse animations every tick).
+  // Robot's "front" (sensor module) is on the RIGHT of the source image.
+  // atan2 gives east=0°, north=90°; CSS rotate is clockwise from up.
+  // To align image-right with direction-of-travel: cssDeg = -headingDeg.
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const body = document.querySelector<HTMLElement>('[data-kp-robot-body]');
+    if (!body) return;
+    const cssDeg = -robotPos.headingDeg;
+    body.style.transform = `rotate(${cssDeg}deg)`;
+  }, [robotPos.headingDeg]);
 
   const getEventIcon = (e: DemoEvent) => {
     if (!eventIcons.current[e.id]) {
