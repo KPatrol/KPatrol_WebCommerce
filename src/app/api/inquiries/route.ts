@@ -22,6 +22,19 @@ async function notifyAdmin(inquiry: Inquiry) {
 
   if (!RESEND_API_KEY || !ADMIN_EMAIL) return; // Skip if not configured
 
+  // Only emit the admin button when we have a real public URL; localhost links
+  // in transactional mail are worse than no link.
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const adminButton = siteUrl
+    ? `
+              <div style="margin-top: 16px; text-align: center;">
+                <a href="${siteUrl.replace(/\/$/, '')}/admin"
+                   style="display:inline-block; background: linear-gradient(to right, #2563eb, #0891b2); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                  Xem trong Admin Panel →
+                </a>
+              </div>`
+    : '';
+
   try {
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -48,13 +61,7 @@ async function notifyAdmin(inquiry: Inquiry) {
               <div style="margin-top: 16px; padding: 16px; background: #1e293b; border-radius: 8px; color: #e2e8f0;">
                 <strong style="color:#94a3b8;">Nội dung:</strong><br/><br/>
                 ${escapeHtml(inquiry.message).replace(/\n/g, '<br/>')}
-              </div>
-              <div style="margin-top: 16px; text-align: center;">
-                <a href="${process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3001'}/admin" 
-                   style="display:inline-block; background: linear-gradient(to right, #2563eb, #0891b2); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-                  Xem trong Admin Panel →
-                </a>
-              </div>
+              </div>${adminButton}
             </div>
           </div>
         `,
@@ -82,17 +89,53 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Defensive validation — public endpoint, anything from the browser could
+  // be malformed. Caps prevent megabyte payloads ballooning the JSON store.
+  const name = String(body.name).trim();
+  const email = String(body.email).trim();
+  const message = String(body.message).trim();
+  const phone = String(body.phone ?? '').trim();
+  const company = body.company ? String(body.company).trim() : undefined;
+  // RFC 5322-flavoured local check; we don't try to be 100% conformant —
+  // anything that obviously doesn't look like an address gets rejected so
+  // the operator's inbox doesn't fill with "test test test" garbage.
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!emailOk) {
+    return NextResponse.json(
+      { error: 'Email không hợp lệ.' },
+      { status: 400 }
+    );
+  }
+  if (name.length < 2 || name.length > 100) {
+    return NextResponse.json(
+      { error: 'Họ tên phải từ 2 đến 100 ký tự.' },
+      { status: 400 }
+    );
+  }
+  if (message.length < 10 || message.length > 2000) {
+    return NextResponse.json(
+      { error: 'Nội dung phải từ 10 đến 2000 ký tự.' },
+      { status: 400 }
+    );
+  }
+  if (phone && phone.length > 30) {
+    return NextResponse.json(
+      { error: 'Số điện thoại không hợp lệ.' },
+      { status: 400 }
+    );
+  }
+
   const inquiries = getInquiries();
   const newInquiry: Inquiry = {
     id: `inq-${Date.now()}`,
-    name: String(body.name).trim(),
-    email: String(body.email).trim(),
-    phone: String(body.phone ?? '').trim(),
-    company: body.company ? String(body.company).trim() : undefined,
+    name,
+    email,
+    phone,
+    company,
     productId: body.productId ?? undefined,
     productName: body.productName ?? undefined,
     quantity: body.quantity ? Number(body.quantity) : undefined,
-    message: String(body.message).trim(),
+    message,
     status: 'new',
     createdAt: new Date().toISOString(),
     note: undefined,

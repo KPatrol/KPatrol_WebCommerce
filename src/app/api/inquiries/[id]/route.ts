@@ -32,6 +32,11 @@ export async function DELETE(
 ) {
   const inquiries = getInquiries();
   const newList = inquiries.filter((i) => i.id !== params.id);
+  // Distinguish "already deleted / never existed" from "successfully deleted"
+  // so admin UI can show the right toast instead of always claiming success.
+  if (newList.length === inquiries.length) {
+    return NextResponse.json({ error: 'Not found' }, { status: 404 });
+  }
   writeJSON('inquiries', newList);
   return NextResponse.json({ success: true });
 }

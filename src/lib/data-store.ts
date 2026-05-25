@@ -118,6 +118,15 @@ export interface Inquiry {
   note?: string;         // Admin internal note
 }
 
+// ── Newsletter Subscriber Types ──────────────────────────────────────────────
+
+export interface Subscriber {
+  id: string;
+  email: string;
+  createdAt: string;
+  source: 'footer' | 'inline';
+}
+
 // ── Default seed data ─────────────────────────────────────────────────────────
 
 export const DEFAULT_PRODUCTS: Product[] = [
