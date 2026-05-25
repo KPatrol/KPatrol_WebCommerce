@@ -10,24 +10,37 @@ export function ContactCTASection() {
   const [form, setForm] = useState({ name: '', phone: '', message: '' });
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    const subject = `K-Patrol — Liên hệ tư vấn từ ${form.name || 'khách hàng'}`;
-    const body = [
-      `Họ tên: ${form.name}`,
-      `Số điện thoại: ${form.phone}`,
-      '',
-      'Nội dung:',
-      form.message || '(không có)',
-    ].join('\n');
-    const mailto = `mailto:khoa.vu@alphaasimov.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setSent(true);
-    setSubmitting(false);
+    setErrorMsg(null);
+
+    try {
+      const res = await fetch('/api/inquiries', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          // Mini form has no email field — server requires it, so derive a placeholder.
+          email: `${form.phone || 'no-email'}@kpatrol.inquiry`,
+          phone: form.phone,
+          message: form.message || `Khách quan tâm K-Patrol từ section liên hệ. SĐT: ${form.phone}`,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error ?? 'request_failed');
+      }
+
+      setSent(true);
+    } catch (err: any) {
+      setErrorMsg(err?.message ?? 'request_failed');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   // Order: email (left) → address (center, anchor) → hotline (right) for symmetric balance
@@ -158,6 +171,15 @@ export function ContactCTASection() {
                   placeholder={t('contactCta.form.messagePlaceholder')}
                 />
               </div>
+              {errorMsg && (
+                <div
+                  role="alert"
+                  className="rounded-xl bg-rose-500/10 ring-1 ring-rose-400/40 px-3 py-2 text-xs text-rose-200"
+                >
+                  <p className="font-bold">{t('contactCta.form.errorTitle')}</p>
+                  <p className="text-rose-300/80">{t('contactCta.form.errorMessage')}</p>
+                </div>
+              )}
               <button
                 type="submit"
                 disabled={submitting || sent}

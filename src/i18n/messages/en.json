@@ -550,7 +550,9 @@
       "messagePlaceholder": "Your message...",
       "submitting": "Sending...",
       "submitButton": "Send Consultation Request",
-      "agreement": "By submitting this form, you agree to our privacy policy."
+      "agreement": "By submitting this form, you agree to our privacy policy.",
+      "errorTitle": "Could not send your request",
+      "errorMessage": "Something went wrong, please retry or contact us via hotline."
     }
   },
   "footer": {
@@ -564,7 +566,8 @@
       "placeholder": "Enter your email",
       "button": "Subscribe",
       "subscribing": "Subscribing...",
-      "success": "Thank you for subscribing!"
+      "success": "Thank you for subscribing!",
+      "error": "Subscription failed. Please check your email and try again."
     },
     "product": "Product",
     "features": "Features",
@@ -867,7 +870,9 @@
       "messagePlaceholder": "I'd like a quote for the Pro plan for a 200m² office...",
       "submit": "Send inquiry",
       "submitting": "Sending...",
-      "sent": "Sent — we'll be in touch shortly!"
+      "sent": "Sent — we'll be in touch shortly!",
+      "errorTitle": "Submission failed",
+      "errorMessage": "Please retry or call our hotline at 0822 608 286."
     },
     "cards": {
       "hotline": "Hotline 24/7",

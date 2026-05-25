@@ -404,7 +404,9 @@
       "messagePlaceholder": "Nội dung tin nhắn của bạn...",
       "submitting": "Đang gửi...",
       "submitButton": "Gửi yêu cầu tư vấn",
-      "agreement": "Bằng việc gửi form, bạn đồng ý với chính sách bảo mật của chúng tôi."
+      "agreement": "Bằng việc gửi form, bạn đồng ý với chính sách bảo mật của chúng tôi.",
+      "errorTitle": "Không gửi được yêu cầu",
+      "errorMessage": "Đã xảy ra lỗi, vui lòng thử lại hoặc liên hệ trực tiếp qua hotline."
     }
   },
   "specs": {
@@ -564,7 +566,8 @@
       "placeholder": "Nhập email của bạn",
       "button": "Đăng ký",
       "subscribing": "Đang đăng ký...",
-      "success": "Cảm ơn bạn đã đăng ký!"
+      "success": "Cảm ơn bạn đã đăng ký!",
+      "error": "Không thể đăng ký. Vui lòng kiểm tra email và thử lại."
     },
     "product": "Sản phẩm",
     "features": "Tính năng",
@@ -867,7 +870,9 @@
       "messagePlaceholder": "Tôi muốn tư vấn gói Pro cho văn phòng 200m²...",
       "submit": "Gửi yêu cầu tư vấn",
       "submitting": "Đang gửi...",
-      "sent": "Đã gửi — chúng tôi sẽ liên hệ sớm!"
+      "sent": "Đã gửi — chúng tôi sẽ liên hệ sớm!",
+      "errorTitle": "Gửi thất bại",
+      "errorMessage": "Vui lòng thử lại hoặc gọi hotline 0822 608 286."
     },
     "cards": {
       "hotline": "Hotline 24/7",

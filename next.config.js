@@ -16,10 +16,9 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://kpatrol.khoavd.online',
   },
   
-  // Output configuration
-  // - 'standalone' for Docker deployment (server-side rendering)
-  // - 'export' for Netlify static hosting
-  output: process.env.DOCKER_BUILD === 'true' ? 'standalone' : 'export',
+  // Output: 'standalone' for Docker; default Next.js server for Netlify
+  // (Netlify runs Next.js with API routes via @netlify/plugin-nextjs).
+  output: process.env.DOCKER_BUILD === 'true' ? 'standalone' : undefined,
 };
 
 module.exports = nextConfig;

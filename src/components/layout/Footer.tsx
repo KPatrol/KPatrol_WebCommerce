@@ -65,18 +65,35 @@ export function Footer() {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [subscribeError, setSubscribeError] = useState<string | null>(null);
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    
+
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubscribed(true);
-    setEmail('');
-    
-    setTimeout(() => setIsSubscribed(false), 3000);
+    setSubscribeError(null);
+
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source: 'footer' }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error ?? 'request_failed');
+      }
+
+      setIsSubscribed(true);
+      setEmail('');
+      setTimeout(() => setIsSubscribed(false), 3000);
+    } catch (err: any) {
+      setSubscribeError(err?.message ?? 'request_failed');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -168,6 +185,15 @@ export function Footer() {
                 )}
               </button>
             </motion.form>
+
+            {subscribeError && (
+              <div
+                role="alert"
+                className="mt-4 mx-auto max-w-lg rounded-xl bg-rose-500/10 ring-1 ring-rose-400/40 px-4 py-2.5 text-xs text-rose-200"
+              >
+                {t('footer.newsletter.error')}
+              </div>
+            )}
           </div>
         </div>
       </div>

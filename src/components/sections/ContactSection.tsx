@@ -6,7 +6,6 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { notification } from '@/lib/notification';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import axios from 'axios';
 
 const containerVariants = {
   hidden: { opacity: 0 },

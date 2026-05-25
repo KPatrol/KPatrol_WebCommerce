@@ -256,16 +256,7 @@ export function Navbar() {
             >
               <div className="p-6">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-8">
-                  {/* <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Image
-                      src="/logo.png"
-                      alt="K-Patrol"
-                      width={140}
-                      height={40}
-                      className="h-9 w-auto object-contain"
-                    />
-                  </Link> */}
+                <div className="flex items-center justify-end mb-8">
                   <button
                     className="w-10 h-10 rounded-xl bg-slate-900/80 ring-1 ring-cyan-500/30 text-cyan-200 hover:ring-cyan-400/60 transition-all flex items-center justify-center"
                     onClick={() => setIsMobileMenuOpen(false)}

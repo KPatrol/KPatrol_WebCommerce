@@ -55,22 +55,41 @@ export function CTASection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setIsSuccess(false);
-      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
-    }, 3000);
+    setErrorMsg(null);
+
+    try {
+      const res = await fetch('/api/inquiries', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message || t('cta.form.messagePlaceholder'),
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error ?? 'request_failed');
+      }
+
+      setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+        setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      }, 3000);
+    } catch (err: any) {
+      setErrorMsg(err?.message ?? 'request_failed');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -304,6 +323,16 @@ export function CTASection() {
                       placeholder={t('cta.form.messagePlaceholder')}
                     />
                   </div>
+
+                  {errorMsg && (
+                    <div
+                      role="alert"
+                      className="rounded-xl bg-rose-500/10 ring-1 ring-rose-400/40 px-4 py-3 text-sm text-rose-200"
+                    >
+                      <p className="font-bold">{t('cta.form.errorTitle')}</p>
+                      <p className="text-rose-300/80">{t('cta.form.errorMessage')}</p>
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <button
