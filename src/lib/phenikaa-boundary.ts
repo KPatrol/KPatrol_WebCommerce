@@ -32,7 +32,7 @@ export const PHENIKAA_BBOX = {
   maxLon: Math.max(...lngs),
 };
 
-export const PHENIKAA_CENTER: [number, number] = [
-  (PHENIKAA_BBOX.minLat + PHENIKAA_BBOX.maxLat) / 2,
-  (PHENIKAA_BBOX.minLon + PHENIKAA_BBOX.maxLon) / 2,
-];
+// Demo location centre (overrides polygon centroid). Updated 2026-05-26
+// for the thesis defence demo — the showcase point sits at this specific
+// coordinate inside the Phenikaa boundary, not the geometric centroid.
+export const PHENIKAA_CENTER: [number, number] = [20.960934, 105.746491];

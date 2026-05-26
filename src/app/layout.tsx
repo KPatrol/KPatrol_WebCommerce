@@ -20,11 +20,17 @@ export const metadata: Metadata = {
   description: 'Smart patrol robot ecosystem integrated with AIoT. 24/7 security monitoring with advanced AI technology.',
   keywords: ['robot', 'patrol', 'security', 'AIoT', 'surveillance', 'smart'],
   authors: [{ name: 'K-Patrol Team' }],
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'K-Patrol | Smart Security Patrol Robot',
     description: 'Smart patrol robot ecosystem integrated with AIoT',
     type: 'website',
     locale: 'vi_VN',
+    images: ['/favicon.png'],
   },
 };
 
