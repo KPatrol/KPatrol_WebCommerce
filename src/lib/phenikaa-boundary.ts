@@ -35,4 +35,4 @@ export const PHENIKAA_BBOX = {
 // Demo location centre (overrides polygon centroid). Updated 2026-05-26
 // for the thesis defence demo — the showcase point sits at this specific
 // coordinate inside the Phenikaa boundary, not the geometric centroid.
-export const PHENIKAA_CENTER: [number, number] = [20.960934, 105.746491];
+export const PHENIKAA_CENTER: [number, number] = [20.96068215441417, 105.74625670909883];
